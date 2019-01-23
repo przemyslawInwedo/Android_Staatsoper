@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/live"
+        android:icon="@drawable/ic_off_air"
+        android:title="@string/live"/>
+
+    <item
+        android:id="@+id/videotheque"
+        android:icon="@drawable/ic_live_stream"
+        android:title="@string/videotheque"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile"/>
+
+</menu>

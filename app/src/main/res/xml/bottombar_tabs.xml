@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        barColorWhenSelected="@color/white"
+        icon="@drawable/ic_off_air"
+        id="@+id/live"
+        title="@string/live"
+        badgeHidesWhenActive="false"/>
+    <tab
+        barColorWhenSelected="@color/white"
+        icon="@drawable/ic_live_stream"
+        id="@+id/videotheque"
+        title="@string/videotheque"
+        badgeHidesWhenActive="false"/>
+    <tab
+        barColorWhenSelected="@color/white"
+        icon="@drawable/ic_profile"
+        id="@+id/profile"
+        title="@string/profile"
+        badgeHidesWhenActive="false"/>
+</tabs>

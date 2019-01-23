@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottombar_black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.bosphere.fadingedgelayout.FadingEdgeLayout
+            android:id="@+id/fading_edge_layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:fel_edge="bottom"
+            app:fel_size_bottom="160dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <RelativeLayout
+                    android:id="@+id/root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/cover_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:src="#e6e6e6" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/cover_photo"
+                        android:scaleType="fitXY"
+                        android:src="#74000000" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </com.bosphere.fadingedgelayout.FadingEdgeLayout>
+
+        <TextView
+            android:id="@+id/tv_director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_title"
+            android:layout_marginLeft="25dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:text="DIRECTOR" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/separator"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="TITLE" />
+
+        <ImageView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/separator"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="TITLE" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/separator"
+            android:layout_alignBottom="@id/fading_edge_layout"
+            />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fading_edge_layout"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/beige_light"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            tools:text="long desc" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cover_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:src="#e6e6e6" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/cover_photo"
+                android:scaleType="fitXY"
+                android:src="#74000000" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignBottom="@+id/cover_photo"
+                android:scaleType="fitXY"
+                android:src="@drawable/black_gradient" />
+
+            <TextView
+                android:id="@+id/tv_director"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_title"
+                android:layout_marginLeft="25dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="DIRECTOR" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/cover_photo"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="50dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                tools:text="TITLE" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/cover_photo"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="15dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/beige_light"
+                android:textSize="18sp"
+                tools:text="Sun, January 20, 2019 | 15:30" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

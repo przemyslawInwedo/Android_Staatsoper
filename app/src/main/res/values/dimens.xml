@@ -1,0 +1,84 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="main_logo_margin_left">10dp</dimen>
+    <dimen name="main_top_border_height">6dp</dimen>
+    <dimen name="main_borderlogoinfo_height">34dp</dimen>
+    <dimen name="main_borderlogoinfo_width">1dp</dimen>
+    <dimen name="main_topcon_height">60dp</dimen>
+    <dimen name="main_infobutton_margin">10dp</dimen>
+    <dimen name="main_infobutton_size">50dp</dimen>
+    <dimen name="back_button_width">30dp</dimen>
+    <dimen name="back_button_height">30dp</dimen>
+    <dimen name="main_infobutton_padding">10dp</dimen>
+    <dimen name="main_selected_language_padding_left">15dp</dimen>
+    <dimen name="lp_infocon_padding_top">10dp</dimen>
+    <dimen name="lp_infocon_padding_left">10dp</dimen>
+    <dimen name="lp_infocon_padding_right">10dp</dimen>
+    <dimen name="lp_bordertimetable_height">1dp</dimen>
+    <dimen name="lp_separatortimetable_width">1dp</dimen>
+    <dimen name="lp_timeseparatordate_padding_top">8dp</dimen>
+    <dimen name="lp_timeseparatordate_padding_bottom">8dp</dimen>
+    <dimen name="lp_separator_margin_left">4dp</dimen>
+    <dimen name="lp_separator_margin_right">4dp</dimen>
+    <dimen name="lp_image_height">210dip</dimen>
+    <dimen name="lp_status_padding_left">10dp</dimen>
+    <dimen name="lp_date_margin_left">7dp</dimen>
+    <dimen name="lp_desc_padding_bottom">10dp</dimen>
+    <dimen name="info_margin_vertical">15dp</dimen>
+    <dimen name="info_bigpadding_horizontal">30dp</dimen>
+    <dimen name="lp_progressbar_dimens">30dp</dimen>
+    <dimen name="lp_progressbar_padding">20dp</dimen>
+    <dimen name="sub_settings_margin_bottom">10dp</dimen>
+    <dimen name="sub_settings_margin_right">10dp</dimen>
+    <dimen name="main_staatslogo_width">160dp</dimen>
+    <dimen name="main_staatslogo_height">44dp</dimen>
+    <dimen name="sub_settings_border_width">1dp</dimen>
+    <dimen name="sub_settings_border_height">30dp</dimen>
+    <dimen name="sub_text_icon_size">55dp</dimen>
+    <dimen name="sub_bright_icon_size">55dp</dimen>
+
+    <dimen name="sub_plusandminus_padding">10dp</dimen>
+    <dimen name="sub_icon_padding">5dp</dimen>
+    <dimen name="sub_plusandminus_size">42dp</dimen>
+    <dimen name="sub_icon_margin_horizontal">16dp</dimen>
+    <dimen name="lp_land_operaimagecontainer_minHeight">100dp</dimen>
+    <dimen name="lp_xlarge_scrollbar_size">6dp</dimen>
+    <dimen name="item_language_abbreviation_padding">15dp</dimen>
+    <dimen name="item_language_margin_horizontal">10dp</dimen>
+    <dimen name="item_subtitle_padding_left">10dp</dimen>
+    <dimen name="text_subtitle_size">16sp</dimen>
+    <dimen name="switch_subtitle_score_margin_top">4dp</dimen>
+    <dimen name="switch_subtitle_score_text_margin_right">8dp</dimen>
+    <dimen name="switch_arrow_margin">4dp</dimen>
+    <dimen name="main_icon_size">28dp</dimen>
+    <dimen name="main_icon_padding_vertical">10dp</dimen>
+
+    <!-- PHASE 3: player fragment & pairing -->
+
+    <dimen name="check_screens_padding_bottom">30dp</dimen>
+    <dimen name="check_screens_padding_bottom_big">80dp</dimen>
+    <dimen name="check_screens_margin_top">30dp</dimen>
+
+    <dimen name="check_screen_vertical_margin">40dp</dimen>
+    <dimen name="check_screen_margin_top">20dp</dimen>
+    <dimen name="check_screen_margin_top_big">60dp</dimen>
+
+    <dimen name="pair_edittext_width">240dp</dimen>
+    <dimen name="pair_edittext_height">50dp</dimen>
+    <dimen name="pair_pairbutton_height">40dp</dimen>
+    <dimen name="pair_pairbutton_width">240dp</dimen>
+
+    <dimen name="status_logo_width">50dp</dimen>
+    <dimen name="status_logo_height">50dp</dimen>
+
+    <dimen name="player_button_size">36dp</dimen>
+    <dimen name="player_icon_size">20dp</dimen>
+
+    <!-- PHASE 4 -->
+    <dimen name="lp_button_width">300dp</dimen>
+    <dimen name="lp_infocon_padding_bottom">10dp</dimen>
+
+</resources>

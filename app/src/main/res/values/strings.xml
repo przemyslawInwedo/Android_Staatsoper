@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Staatsoper Livestreaming</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="live">Live</string>
+    <string name="videotheque">Videotheque</string>
+    <string name="login">Login</string>
+    <string name="profile">Profile</string>
+    <string name="empty_list">It seems that VOD list is empty ATM</string>
+</resources>
