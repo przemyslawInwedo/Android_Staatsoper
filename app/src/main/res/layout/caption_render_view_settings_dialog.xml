@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_margin="10dip">
+
+	<com.nexstreaming.nexplayerengine.NexCaptionPreview
+		android:id="@+id/caption_preview"
+		android:layout_width="match_parent"
+		android:layout_height="40dip"
+		android:layout_gravity="center" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_margin="6dip">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/font"
+					android:textSize="20sp"
+					android:textStyle="bold"
+					android:layout_marginTop="6dip"
+					android:layout_marginBottom="6dip"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/caption_title_size"
+					android:textSize="14sp"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+
+					<TextView
+						android:id="@+id/cur_font_size"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="100"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+
+					<SeekBar
+						android:id="@+id/font_size_seek_bar"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="8"
+						android:max="3"
+						android:progress="1"/>
+
+					<TextView
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="200"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/caption_title_opacity"
+					android:textSize="14sp"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+
+					<TextView
+						android:id="@+id/cur_font_opacity"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="255"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+
+					<SeekBar
+						android:id="@+id/font_opacity_seek_bar"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="8"
+						android:max="255"
+						android:progress="255"/>
+
+					<TextView
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="255"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+					<TextView
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="@string/caption_title_color"
+						android:layout_weight="5"
+						android:textSize="14sp"/>
+					<Spinner
+						android:id="@+id/font_color_spinner"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="5"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+					<TextView
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="@string/caption_title_edge"
+						android:layout_weight="5"
+						android:textSize="14sp"/>
+					<Spinner
+						android:id="@+id/font_edge_attributes_spinner"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="5"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/edge_settings_layout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/edge"
+						android:textSize="20sp"
+						android:textStyle="bold"
+						android:layout_marginTop="6dip"
+						android:layout_marginBottom="6dip"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/caption_title_opacity"
+						android:textSize="14sp"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center">
+
+						<TextView
+							android:id="@+id/cur_shadow_opacity"
+							android:layout_width="0dip"
+							android:layout_height="wrap_content"
+							android:text="255"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:textSize="12sp"/>
+
+						<SeekBar
+							android:id="@+id/shadow_opacity_seek_bar"
+							android:layout_width="0dip"
+							android:layout_height="wrap_content"
+							android:layout_weight="8"
+							android:max="255"
+							android:progress="255"/>
+
+						<TextView
+							android:id="@+id/max_shadow_opacity"
+							android:layout_width="0dip"
+							android:layout_height="wrap_content"
+							android:text="255"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:textSize="12sp"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center">
+						<TextView
+							android:layout_width="0dip"
+							android:layout_height="wrap_content"
+							android:text="@string/caption_title_color"
+							android:layout_weight="5"
+							android:textSize="14sp"/>
+						<Spinner
+							android:id="@+id/shadow_color_spinner"
+							android:layout_width="0dip"
+							android:layout_height="wrap_content"
+							android:layout_weight="5"/>
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/caption_title_background"
+					android:textSize="20sp"
+					android:textStyle="bold"
+					android:layout_marginTop="6dip"
+					android:layout_marginBottom="6dip"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/caption_title_opacity"
+					android:textSize="14sp"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+
+					<TextView
+						android:id="@+id/cur_bg_opacity"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="255"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+
+					<SeekBar
+						android:id="@+id/bg_opacity_seek_bar"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="8"
+						android:max="255"
+						android:progress="255"/>
+
+					<TextView
+						android:id="@+id/max_bg_opacity"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="255"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+					<TextView
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="@string/caption_title_color"
+						android:layout_weight="5"
+						android:textSize="14sp"/>
+					<Spinner
+						android:id="@+id/bg_color_spinner"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="5"/>
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/caption_title_window"
+					android:textSize="20sp"
+					android:textStyle="bold"
+					android:layout_marginTop="6dip"
+					android:layout_marginBottom="6dip"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/caption_title_opacity"
+					android:textSize="14sp"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+
+					<TextView
+						android:id="@+id/cur_window_opacity"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="255"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+
+					<SeekBar
+						android:id="@+id/window_opacity_seek_bar"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="8"
+						android:max="255"
+						android:progress="255"/>
+
+					<TextView
+						android:id="@+id/max_window_opacity"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="255"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:textSize="12sp"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+					<TextView
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:text="@string/caption_title_color"
+						android:layout_weight="5"
+						android:textSize="14sp"/>
+					<Spinner
+						android:id="@+id/window_color_spinner"
+						android:layout_width="0dip"
+						android:layout_height="wrap_content"
+						android:layout_weight="5"/>
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</ScrollView>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center">
+			<Button
+				android:id="@+id/reset_button"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/reset"/>
+			<View
+				android:layout_width="0dip"
+				android:layout_height="1dip"
+				android:layout_weight="1"/>
+			<Button
+				android:id="@+id/cancel_button"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/cancel"/>
+			<Button
+				android:id="@+id/save_button"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/save"/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+</LinearLayout>

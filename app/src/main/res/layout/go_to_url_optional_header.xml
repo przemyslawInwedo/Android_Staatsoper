@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/optional_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dip"
+        android:text="@string/pref_wv_drm_optional_header_title"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/optional_header_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/optional_header_title"
+        android:hint="Input Key"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/optional_header_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/optional_header_key"
+        android:hint="Input Value"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/optional_header_value"
+        android:text="@string/pref_wv_drm_optional_header_add_button" />
+
+    <Button
+        android:id="@+id/deleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/optional_header_value"
+        android:layout_toEndOf="@+id/addItem"
+        android:text="@string/pref_wv_drm_optional_header_delete_button" />
+
+
+    <ListView
+        android:id="@+id/listView_optional_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addItem"
+        android:clickable="false"
+        android:scrollbars="none"></ListView>
+
+</RelativeLayout>

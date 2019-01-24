@@ -12,7 +12,6 @@ import app.nunc.com.staatsoperlivestreaming.R;
 public class ProfileFragment extends Fragment {
 
     public ProfileFragment() {
-        // Required empty public constructor
     }
 
     @Override

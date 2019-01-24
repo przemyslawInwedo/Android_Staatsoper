@@ -14,11 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
-import app.nunc.com.staatsoperlivestreaming.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.Presenter.AvailableStreamsPresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
+import app.nunc.com.staatsoperlivestreaming.View.EventsView;
 
 import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
 
@@ -33,15 +33,12 @@ public class LiveFragment extends Fragment implements EventsView {
     private View progress;
 
     public LiveFragment() {
-        // Required empty public constructor
-
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         availableStreamsPresenter = new AvailableStreamsPresenter(this);
         View view = inflater.inflate(R.layout.fragment_live, container, false);
         listView = view.findViewById(R.id.list);
@@ -65,7 +62,6 @@ public class LiveFragment extends Fragment implements EventsView {
                         .commit();
             }
         });
-
         return view;
     }
 
@@ -87,11 +83,9 @@ public class LiveFragment extends Fragment implements EventsView {
     @Override
     public void hideProgress() {
         progress.setVisibility(View.GONE);
-
     }
 
     @Override
     public void onError(Throwable e) {
-
     }
 }

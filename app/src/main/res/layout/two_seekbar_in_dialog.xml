@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seekbar_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pref_max_bandwidth_title"/>
+    
+    <LinearLayout 
+        android:id="@+id/max_bw_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dip">
+        
+        <TextView 
+        android:id="@+id/current_max_bw"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/seekbar_in_dialog_current_bw_default"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+    
+	 <SeekBar 
+	     android:id="@+id/max_seekbar"
+	     android:layout_width="0dip"
+	     android:layout_height="wrap_content" 
+	     android:layout_gravity="center"
+	     android:max="10240"
+	     android:layout_weight="3"/>
+	 
+	 <TextView 
+	     android:id="@+id/max_bw"
+	     android:layout_width="0dip"
+	     android:layout_height="wrap_content"
+	     android:text="@string/seekbar_in_dialog_max_bw_default"
+	     android:gravity="center"
+	     android:layout_gravity="center"
+	     android:layout_weight="1" />
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pref_min_bandwidth_title"/>
+    
+    <LinearLayout 
+        android:id="@+id/min_bw_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <TextView 
+        android:id="@+id/current_min_bw"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/seekbar_in_dialog_current_bw_default"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+    
+	 <SeekBar 
+	     android:id="@+id/min_seekbar"
+	     android:layout_width="0dip"
+	     android:layout_height="wrap_content" 
+	     android:layout_gravity="center"
+	     android:max="10240"
+	     android:layout_weight="3"/>
+	 
+	 <TextView 
+	     android:id="@+id/min_bw"
+	     android:layout_width="0dip"
+	     android:layout_height="wrap_content"
+	     android:text="@string/seekbar_in_dialog_max_bw_default"
+	     android:gravity="center"
+	     android:layout_gravity="center"
+	     android:layout_weight="1" />
+    </LinearLayout>
+    
+ 
+</LinearLayout>

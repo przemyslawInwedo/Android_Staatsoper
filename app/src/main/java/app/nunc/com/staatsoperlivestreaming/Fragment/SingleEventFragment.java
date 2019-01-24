@@ -24,7 +24,6 @@ public class SingleEventFragment extends Fragment {
     private ImageView coverPhoto;
 
     public SingleEventFragment() {
-        // Required empty public constructor
     }
 
 

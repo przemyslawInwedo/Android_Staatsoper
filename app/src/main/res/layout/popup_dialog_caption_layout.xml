@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/caption_pre">
+    
+    <com.nexstreaming.nexplayerengine.NexCaptionPreview
+        android:id="@+id/caption_preview"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="40dip"
+        android:layout_margin="10dip"/>
+      
+ 	<LinearLayout
+		   android:id="@+id/setting_button_layout"
+		   android:layout_marginTop="10dip"
+		   android:layout_gravity="center"
+		   android:gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+		android:orientation="horizontal">
+	   <Button
+			android:id="@+id/cancel_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="4dip"
+			android:text="@string/cancel" />
+		<Button
+			android:id="@+id/reset_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="4dip"
+			android:text="@string/reset" />
+		<Button
+		   android:id="@+id/save_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		   android:layout_margin="4dip"
+			android:text="@string/save" />
+    </LinearLayout>
+      
+      
+    <ScrollView
+        android:layout_marginTop="10dip" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+  
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginBottom="5dip"
+        android:background="#fff00f"/>
+        
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/multi_track_text"
+        android:paddingLeft="8dip"
+        android:layout_marginBottom="2dip"
+        android:textSize="30dip"/>
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginBottom="5dip"
+        android:background="#fff00f"/>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="3dip">
+    <!--      <RelativeLayout 
+             android:id="@+id/text_font_style_view"
+             android:layout_marginBottom="2dip"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_font"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/text_font_spinner"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout> -->
+         <RelativeLayout 
+             android:id="@+id/text_font_size_view"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:id="@+id/caption_font_size_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_size"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+             
+             <Spinner
+		        android:id="@+id/text_font_spinner_size"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+             
+         </RelativeLayout>
+         
+         <RelativeLayout 
+             android:id="@+id/text_font_color_view"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_color"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/text_font_spinner_color"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+         
+         <RelativeLayout 
+             android:id="@+id/text_font_opacity"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_opacity"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/text_font_spinner_opacity"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+         
+         <RelativeLayout 
+             android:id="@+id/text_font_edge"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_edge"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/text_font_spinner_edge"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+        
+    </LinearLayout>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginBottom="5dip"
+        android:background="#fff00f"/>
+     <TextView 
+	     android:layout_height="wrap_content"
+	     android:layout_width="fill_parent"
+	     android:text="@string/caption_title_shadow"
+	     android:paddingLeft="8dip"
+	     android:layout_marginBottom="2dip"
+	     android:textSize="30dip"/>
+     
+      <RelativeLayout 
+             android:id="@+id/text_shadow_style"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:id="@+id/caption_shdow_color"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_shadow_color"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+             
+             <Spinner
+		        android:id="@+id/text_font_spinner_shadow_color"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+             
+         </RelativeLayout>
+         
+      <RelativeLayout 
+             android:id="@+id/text_shadow_style_opacity"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:id="@+id/caption_shdow_opacity"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_shadow_opacity"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+             
+             <Spinner
+		        android:id="@+id/text_font_spinner_shadow_opacity"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+             
+         </RelativeLayout>
+     
+       <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginBottom="5dip"
+        android:background="#fff00f"/>
+     
+      <TextView 
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:text="@string/caption_title_background"
+       android:paddingLeft="8dip"
+       android:layout_marginBottom="2dip"
+       android:textSize="30dip"/>
+      
+      <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="3dip">
+         <RelativeLayout 
+             android:id="@+id/text_backgr_style_view"
+             android:layout_marginBottom="2dip"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_color"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/background_color_spinner"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+         <RelativeLayout 
+             android:id="@+id/text_font_opacity_view"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_opacity"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/text_backgr_opacity_spinner"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginBottom="5dip"
+        android:background="#fff00f"/>
+    <TextView 
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:text="@string/caption_title_window"
+       android:paddingLeft="8dip"
+       android:layout_marginBottom="2dip"
+       android:textSize="30dip"/> 
+        
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="3dip">
+         <RelativeLayout 
+             android:id="@+id/window_view"
+             android:layout_marginBottom="2dip"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_color"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/window_color_spinner"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+         <RelativeLayout 
+             android:id="@+id/window_opacity_view"
+             android:layout_marginTop="15dip"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/caption_title_opacity"
+                 android:layout_alignParentLeft="true"
+                 android:paddingLeft="20dip"
+                 android:layout_centerVertical="true"
+                 android:textSize="20dip"/>
+              <Spinner
+		        android:id="@+id/windowr_opacity_spinner"
+		        android:layout_centerVertical="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+    </LinearLayout>  
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginBottom="5dip"
+        android:background="#fff00f"/>
+    
+         </LinearLayout>
+ </ScrollView>
+ 
+  
+</LinearLayout>

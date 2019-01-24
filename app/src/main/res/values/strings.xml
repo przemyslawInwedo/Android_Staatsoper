@@ -6,4 +6,753 @@
     <string name="login">Login</string>
     <string name="profile">Profile</string>
     <string name="empty_list">It seems that VOD list is empty ATM</string>
+
+    <!-- the basic app list . -->
+    <string name="app_list_default_item">BASE</string>
+    <string name="app_list_base_item">BASE</string>
+    <string name="app_list_video_view_item">VIDEO VIEW</string>
+    <!-- NexMediaDrm start -->
+    <string name="app_list_video_view_media_drm_item">MEDIA DRM WITH VIDEO VIEW</string>
+    <!-- NexMediaDrm end -->
+    <string name="app_list_stream_downloader_item">STREAM DOWNLOADER</string>
+    <string name="app_list_video_ofoff_item">VIDEO ON OFF</string>
+
+    <string name="app_list_simplesample_item">SIMGPLE SAMPLE</string>
+
+
+    <string name="app_list_fd_item">FD Sample</string>
+
+    <!-- the basic tab item. -->
+    <string name="multi_stream">Multi Stream</string>
+    <string name="scale_mode">Scale Mode</string>
+    <string name="band_width">Band Width</string>
+    <string name="min_max_band_width">Min/Max Band Width</string>
+    <string name="volume">Volume</string>
+    <string name="caption_style">Caption Style</string>
+    <string name="statistics">Statistic</string>
+    <string name="dolby_ac3_sound">Dolby AC3 Sound</string>
+    <string name="dolby_ac4_sound">Dolby AC4 Sound</string>
+    <string name="select_language">Select Language</string>
+    <string name="change_subtitle">Change Subtitle</string>
+    <string name="dummy_test">Dummy</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="download_sw_codec">Start SW codec download</string>
+    <string name="delete_sw_codec">Delete downloaded Codecs</string>
+
+    <!-- the player scalemode item -->
+    <string name="scale_mode_fit">Fit to screen</string>
+    <string name="scale_mode_full">Stretch to fullscreen</string>
+    <string name="scale_mode_original">Original size</string>
+
+    <!-- the player multi track item -->
+    <string name="multi_track_title">Multi Stream</string>
+    <string name="multi_track_audio">Audio</string>
+    <string name="multi_track_video">Video</string>
+    <string name="multi_track_text">Text</string>
+    <string name="multi_track_custom">Custom Attr</string>
+    <string name="disable">Disable</string>
+    <string name="enable">Enable</string>
+    <!-- the player scalemode item -->
+    <string name="tab_host_item_webview">WebView</string>
+    <string name="tab_host_item_Local">Local</string>
+    <string name="tab_host_item_Streaming">Streaming</string>
+    <string name="tab_host_item_OfflinePlayback">Offline\nPlayback</string>
+    <string name="tab_host_item_preload_nxb">Preload\nNxb</string>
+    <string name="menu_audio_on">Audio On</string>
+    <string name="menu_audio_off">Audio Off</string>
+    <string name="menu_video_on">Video On</string>
+    <string name="menu_video_off">Video Off</string>
+    <string name="menu_text_on">Text On</string>
+    <string name="menu_text_off">Text Off</string>
+    <string-array name="visible_extension_list">
+        <item>asf</item>
+        <item>mp4</item>
+        <item>mp3</item>
+        <item>avi</item>
+        <item>3gp</item>
+        <item>3g2</item>
+        <item>aac</item>
+        <item>wmv</item>
+        <item>ogg</item>
+        <item>egg</item>
+        <item>webm</item>
+        <item>ismv</item>
+        <item>wma</item>
+        <item>mkv</item>
+        <item>amr</item>
+        <item>ts</item>
+        <item>uvu</item>
+        <item>vob</item>
+        <item>mpg</item>
+        <item>flac</item>
+        <item>flv</item>
+        <item>nxt</item>
+        <item>divx</item>
+        <item>f4v</item>
+        <item>skm</item>
+        <item>k3g</item>
+        <item>mov</item>
+        <item>ogm</item>
+        <item>ogv</item>
+        <item>au</item>
+        <item>mka</item>
+        <item>wav</item>
+        <item>qcp</item>
+        <item>ac3</item>
+        <item>ac4</item>
+        <item>m4a</item>
+        <item>nxb.txt</item>
+        <item>nxb</item>
+    </string-array>
+
+    <string-array name="playable_extension_list">
+        <item>asf</item>
+        <item>mp4</item>
+        <item>mp3</item>
+        <item>avi</item>
+        <item>mkv</item>
+        <item>3gp</item>
+        <item>3g2</item>
+        <item>aac</item>
+        <item>wmv</item>
+        <item>ogg</item>
+        <item>egg</item>
+        <item>webm</item>
+        <item>ismv</item>
+        <item>wma</item>
+        <item>amr</item>
+        <item>ts</item>
+        <item>uvu</item>
+        <item>vob</item>
+        <item>mpg</item>
+        <item>nxt</item>
+        <item>divx</item>
+        <item>f4v</item>
+        <item>skm</item>
+        <item>k3g</item>
+        <item>mov</item>
+        <item>ogm</item>
+        <item>ogv</item>
+        <item>au</item>
+        <item>mka</item>
+        <item>wav</item>
+        <item>qcp</item>
+        <item>ac3</item>
+        <item>ac4</item>
+        <item>m4a</item>
+        <item>nex.store</item>
+    </string-array>
+
+    <!-- the file info -->
+    <string name="start_log">Start Log</string>
+    <string name="stop_log">Stop Log</string>
+    <string name="url">URL</string>
+    <string name="no_files">There are no streaming historys to display.</string>
+    <string name="no_cache">There are no caches to display.</string>
+    <string name="no_subtitle">There are no subtitles to display.</string>
+    <string name="go_url">Go To URL</string>
+    <string name="clear_cache">Clear Cache Data</string>
+    <string name="url_detail"> "Enter the URL"</string>
+    <string name="play"> PLAY </string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="download">Download</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="invalid_subtitle_path">Invalid subtitle path!</string>
+    <string name="go_to_url_drm_error">Only one drm available.</string>
+    <string name="go_to_url_error">Please enter url into the edit text.</string>
+    <string name="download_percent_default">0 %</string>
+    <string name="downloading">Downloading...</string>
+    <string name="error_local">Please select the NxbFile.</string>
+    <string name="delete_cache">Do you want to delete selected cache file?</string>
+    <string name="error_nxb">"This nxb files doesn't match nxb file forma" </string>
+    <string name="error_pip">This feature is not currently available.</string>
+    <string name="video_on">Video Off</string>
+    <string name="video_off">Video On</string>
+
+
+    <string name="module">Module</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="pref_drm_options_title">DRM Options</string>
+    <!-- NexMediaDrm start-->
+    <string name="pref_enable_media_drm_title">Media DRM</string>
+    <string name="pref_enable_media_drm_key">enableMediaDRM</string>
+    <string name="pref_enable_media_drm_off">Disable Media DRM</string>
+    <string name="pref_enable_media_drm_on">Enable Media DRM</string>
+    <string name="pref_media_drm_server_key_uri_key">serverKeyURI</string>
+    <string name="pref_media_drm_server_key_uri_default">http://wv-ref-eme-player.appspot.com/proxy</string>
+    <!-- NexMediaDrm end-->
+    <!-- Widevine start-->
+    <string name="pref_wv_drm_optional_header_title">Optional Header</string>
+    <string name="pref_wv_drm_optional_header_key">key</string>
+    <string name="pref_wv_drm_optional_header_value">value</string>
+    <string name="pref_wv_drm_optional_header_add_button">Add </string>
+    <string name="pref_wv_drm_optional_header_delete_button">Delete</string>
+    <!-- Widevine end-->
+    <string name="server_key_uri">Server Key URI</string>
+    <!-- NexWVSWDrm start-->
+    <string name="pref_enable_sw_drm_Key">enableSWDRM</string>
+    <string name="pref_enable_sw_drm_off">Disable SW DRM</string>
+    <string name="pref_enable_sw_drm_on">Enable SW DRM</string>
+    <string name="pref_enable_sw_drm_title">SW DRM</string>
+    <string name="pref_enable_sw_drm_print_all_logs_key">printAll SW DRM Logs</string>
+    <string name="pref_enable_sw_drm_print_all_logs_off">Do not Print Debug Logs</string>
+    <string name="pref_enable_sw_drm_print_all_logs_on">Print All Debug Logs</string>
+    <string name="pref_enable_sw_drm_print_all_logs_title">Print Debug Logs</string>
+    <string name="pref_swdrm_key">swdrm_key</string>
+    <string name="pref_swdrm_server_key_uri_key">swdrm_ServerKeyURI</string>
+    <string name="pref_swdrm_server_key_uri_title">SWDRM: Server Key URI</string>
+    <string name="pref_swdrm_server_key_uri_default">https://proxy.uat.widevine.com/proxy</string>
+    <!-- NexWVSWDrm end-->
+    <string name="rewind">REW</string>
+    <string name="fast_forward">FF</string>
+    <string name="go_to_url_url">URL</string>
+    <string name="go_to_url_hint">http://</string>
+    <string name="nexplayer_sample_contrast_number_default">0</string>
+    <string name="nexplayer_sample_brightness_number_default">0</string>
+    <string name="nxbview_activity_back_button_text"> &lt; back </string>
+    <string name="tab_local_back_button_text"> &lt; back </string>
+    <string name="speed_control_current_speed_default">1.0x</string>
+    <string name="seekbar_volume_layout_start_vol_default">0.0</string>
+    <string name="seekbar_volume_layout_end_vol_default">1.0</string>
+    <string name="seekbar_in_dialog_current_bw_default">0 kbps</string>
+    <string name="seekbar_in_dialog_max_bw_default">10240 kbps</string>
+    <string name="target_bandwidth">Target BandWidth</string>
+    <string name="enable_abr">Enable ABR</string>
+    <string name="target_option">Target Option</string>
+    <array name="target_option_array">
+        <item>DEFAULT</item>
+        <item>BELOW</item>
+        <item>ABOVE</item>
+        <item>MATCH</item>
+    </array>
+    <string name="segment_option">Segment Option</string>
+    <array name="segment_option_array">
+        <item>DEFAULT</item>
+        <item>QUICKMIX</item>
+        <item>LATEMIX</item>
+    </array>
+    <string name="bps">bps</string>
+    <string name="pref_sdk_mode_key">sdkMode</string>
+    <string name="pref_button_drm_clear">Clear</string>
+    <string name="pref_swdrm_cache_clear">Clear</string>
+    <string name="font">Font</string>
+
+    <string name="caption_test_layout_clear_button">Caption Clear</string>
+    <string name="caption_test_layout_reset_button">Setting Reset</string>
+    <string name="caption_test_layout_type_face">Typeface</string>
+    <string name="caption_test_layout_bold">Bold</string>
+    <string name="caption_test_layout_emboss">Emboss</string>
+    <string name="caption_test_layout_specular">Specular</string>
+    <string name="caption_test_layout_blur_radius">Blur Radius</string>
+    <string name="caption_test_layout_stroke">Stroke</string>
+    <string name="caption_test_layout_color">Color</string>
+    <string name="caption_test_layout_opacity">Opacity</string>
+    <string name="caption_test_layout_width">Width</string>
+    <string name="pref_debug_codec_title">Codec Log</string>
+    <string name="pref_debug_codec_key">codecLog</string>
+    <string name="pref_debug_renderer_title">Renderer Log</string>
+    <string name="pref_debug_renderer_key">rendererLog</string>
+    <string name="pref_debug_protocol_title">Protocol Log</string>
+    <string name="pref_debug_protocol_logs_debug_title">DEBUG</string>
+    <string name="pref_debug_protocol_logs_debug_key">protocolLogDebug</string>
+    <string name="pref_debug_protocol_logs_rtp_title">RTP</string>
+    <string name="pref_debug_protocol_logs_rtp_key">protocolLogRTP</string>
+    <string name="pref_debug_protocol_logs_rtcp_title">RTCP</string>
+    <string name="pref_debug_protocol_logs_rtcp_key">protocolLogRTCP</string>
+    <string name="pref_debug_protocol_logs_frame_title">FRAME</string>
+    <string name="pref_debug_protocol_logs_frame_key">protocolLogFrame</string>
+    <string name="pref_start_nearest_bw_title">Start Nearest BW</string>
+    <string name="pref_start_nearest_bw_key">startNearestBW</string>
+    <string name="pref_start_sec_key">startSec</string>
+    <string name="pref_start_sec_title">Start Seconds</string>
+    <string name="pref_useUDP">Use UDP for streaming</string>
+    <string name="pref_useUDP_desc">Uses UDP when streaming (if this is off, TCP is used)</string>
+    <string name="pref_useUDP_off">TCP will be used</string>
+    <string name="pref_useUDP_on">UDP will be used</string>
+    <string name="pref_enableAudioOnlyTrack_title">Enable Audio Only Track</string>
+    <string name="pref_enableAudioOnlyTrack_key">enableAOnlyTrack</string>
+    <string name="pref_enableAudioOnlyTrack_off">Disable Audio Only Track</string>
+    <string name="pref_enableAudioOnlyTrack_on">Enable Audio Only Track</string>
+    <string name="pref_enableUpdateBW_title">Update Min/Max BW</string>
+    <string name="pref_enableUpdateBW_key">updateMinMaxBW</string>
+    <string name="pref_enableUpdateBW_off">Do not update</string>
+    <string name="pref_enableUpdateBW_on">Update Min/Max BW</string>
+    <string name="pref_stable_audio_title">Stable Audio</string>
+    <string name="pref_stable_audio_key">stableAudio</string>
+    <string name="pref_stable_video_title">Stable Video</string>
+    <string name="pref_stable_audio_file_name">stableaudio.set</string>
+    <string name="pref_stable_video_file_name">stablevideo.set</string>
+    <string name="pref_stable_video_key">stableVideo</string>
+    <string name="pref_seek_offset_key">SeekOffset</string>
+    <string name="pref_seek_offset">Seek Offset</string>
+    <string name="pref_buffering_time">Buffering Time</string>
+    <string name="pref_buffering_time_key">bufferTime</string>
+    <string name="pref_ts_dumpEnable_key">tsDumpEnable</string>
+    <string name="pref_ts_dumpPath_key">tsDumpPath</string>
+    <string name="pref_ts_dumpEnable_off">TS Dump is diabled</string>
+    <string name="pref_ts_dumpEnable_on">TS Dump is enabled</string>
+    <string name="pref_ts_dumpEnable">TS Dump</string>
+    <string name="pref_ts_dumpPath">TS Dump Path</string>
+    <string name="pref_ts_dumpPath_default">/sdcard/</string>
+    <string name="pref_pcm_dumpEnable_key">pcmDumpEnable</string>
+    <string name="pref_pcm_dumpPath_key">pcmDumpPath</string>
+    <string name="pref_pcm_dumpEnable_off">PCM Dump is diabled</string>
+    <string name="pref_pcm_dumpEnable_on">PCM Dump is enabled</string>
+    <string name="pref_pcm_dumpEnable">PCM Dump</string>
+    <string name="pref_pcm_dumpPath">PCM Dump Path</string>
+    <string name="pref_pcm_dumpPath_default">/sdcard/</string>
+    <string name="pref_trackdownEnable_key">trackdownEnable</string>
+    <string name="pref_trackdownEnable">Trackdown</string>
+    <string name="pref_trackdownEnable_desc">Switches to a lower bandwidth track if the resolution or bitrate of the current track is too high for the device to play smoothly</string>
+    <string name="pref_trackdownEnable_off">Trackdown is disabled</string>
+    <string name="pref_trackdownEnable_on">Trackdown is enabled</string>
+    <string name="pref_trackdownThreshold_key">trackdownThreshold</string>
+    <string name="pref_lowlatencyEnable_key">Low-Latency Enable</string>
+    <string name="pref_lowlatencyEnable">Low-Latency</string>
+    <string name="pref_lowlatencyEnable_desc">Switches to a lower bandwidth track if the resolution or bitrate of the current track is too high for the device to play smoothly</string>
+    <string name="pref_lowlatencyEnable_off">Low-Latency is disabled</string>
+    <string name="pref_lowlatencyEnable_on">Low-Latency is enabled</string>
+    <string name="pref_lowlatencyValue_key">lowlatencyValue</string>
+    <string name="pref_SPDEnable_key">SPDEnable</string>
+    <string name="pref_SPDEnable">SPD</string>
+    <string name="pref_SPDEnable_off">SPD is disabled</string>
+    <string name="pref_SPDEnable_on">SPD is enabled</string>
+    <string name="pref_SPDValue_key">SPDValue</string>
+    <string name="pref_max_bandwidth_key">maxBandwidth</string>
+    <string name="pref_max_bandwidth_title">Max BW</string>
+    <string name="pref_min_bandwidth_key">minBandwidth</string>
+    <string name="pref_min_bandwidth_title">Min BW</string>
+    <string name="pref_eyePleaser">Eye-Pleaser</string>
+    <string name="pref_eyePleaser_desc">Uses Eye-Pleaser</string>
+    <string name="pref_eyePleaser_off">Eye-Pleaser OFF</string>
+    <string name="pref_eyePleaser_on">Eye-Pleaser ON</string>
+    <string name="pref_download_caption_dialog_title">Caption Download Dialog</string>
+    <string name="pref_download_caption_dialog_key">CaptionDownloadDialog</string>
+    <string name="pref_download_caption_dialog_on">Show caption download dialog</string>
+    <string name="pref_download_caption_dialog_off">Do not show caption download dialog</string>
+    <string name="pref_subtitle_download_path_key">SubtitleDownloadPath</string>
+    <string name="pref_subtitle_download_path">Subtitle Download Path</string>
+    <string name="pref_subtitle_download_path_default_value">/data/data/com.nexstreaming.app.nexplayersample/files/</string>
+    <string name="show_timed_meta_text">Show TimedMeta Text</string>
+    <string name="hide_timed_meta_text">Hide TimedMeta Text</string>
+    <string name="pref_enable_id3_ttml_key">EnableID3TTML</string>
+    <string name="pref_enable_id3_ttml_decs">ID3 TTML</string>
+    <string name="pref_id3_ttml_title">ID3 TTML</string>
+    <string name="pref_statistics_monitor">Statistics Monitor</string>
+    <string name="pref_statistics_monitor_desc">Statistics Monitor</string>
+    <string name="pref_statistics_monitor_on">StatisticsMontior on</string>
+    <string name="pref_statistics_monitor_off">StatisticsMontior off</string>
+
+    <string name="pref_msg_invalid_format">Address has a bad syntex.</string>
+
+
+    <string name="pref_offline_cache_location">Offline cache file location</string>
+    <string name="pref_offline_info_file_path_key">OfflineStoreInfoFilePath</string>
+    <string name="pref_offline_info_file_path_Location">Offline store info file location</string>
+    <string name="pref_offline_prefer_language_audio_key">OfflineStorePreferLanguageAudio</string>
+    <string name="pref_store_all_audio_streams_key">StoreAllAudioStreams</string>
+    <string name="pref_offline_prefer_language_audio_title">Input PreferLanguage Audio</string>
+    <string name="pref_offline_prefer_language_text_key">OfflineStorePreferLanguageText</string>
+    <string name="pref_offline_prefer_language_text_title">Input PreferLanguage Text</string>
+    <string name="pref_offline_stream_id_audio_key">OfflineStoreStreamIDAudio</string>
+    <string name="pref_offline_audio_use_default_id_key">OfflineStoreAudioDefaultID</string>
+    <string name="pref_offline_stream_id_audio_title">Input Audio Stream ID</string>
+    <string name="pref_offline_stream_id_video_key">OfflineStoreStreamIDVideo</string>
+    <string name="pref_store_all_video_streams_key">StoreAllVideoStreams</string>
+    <string name="pref_offline_video_use_default_id_key">OfflineStoreVideoDefaultID</string>
+    <string name="pref_offline_stream_id_video_title">Input Video Stream ID</string>
+    <string name="pref_offline_stream_id_text_key">OfflineStoreStreamIDText</string>
+    <string name="pref_store_all_text_streams_key">StoreAllTextStreams</string>
+    <string name="pref_offline_text_use_default_id_key">OfflineStoreTextDefaultID</string>
+    <string name="pref_offline_stream_id_text_title">Input Text Stream ID</string>
+    <string name="pref_offline_stream_id_custom_attr_key">OfflineStoreStreamIDCustomAttr</string>
+    <string name="pref_offline_custom_use_default_id_key">OfflineStoreCustomDefaultID</string>
+    <string name="pref_offline_stream_id_custom_attr_title">Input Custom Attr Stream ID</string>
+    <string name="pref_offline_use_default_id_title">Use Default Stream Id</string>
+    <string name="pref_store_all_streams_title">Store All Streams</string>
+
+    <string name="pref_offline_audio_use_default_track_id_key">UseDefaultTrackId</string>
+    <string name="pref_offline_use_default_track_id_title">Use Default Track Id</string>
+    <string name="pref_offline_input_track_id_key">InputTrackId</string>
+    <string name="pref_offline_input_track_id_title">Input Track Id</string>
+
+
+    <string name="pref_colorSpace">Video color space</string>
+
+    <string-array name="pref_colorSpace_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_colorSpace_entries">
+        <item>16-bit RGB (565)</item>
+        <item>32-bit RGBA (8888)</item>
+    </string-array>
+
+    <string name="pref_loglevel">Log Level - for debugging</string>
+
+    <string-array name="pref_loglevel_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="pref_debug_logs_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="pref_dynamic_thumbnail_key">DynamicThumbnail</string>
+    <string name="pref_dynamic_thumbnail_title">Dynamic Thumbnail</string>
+    <string name="pref_dynamic_thumbnail_on">Enable Dynamic Thumbnail</string>
+    <string name="pref_dynamic_thumbnail_off">Disable Dynamic Thumbnail</string>
+    <string name="pref_maximum_dynamic_thumbnail_frame_key">MaximumThumbnailFrame</string>
+    <string name="pref_maximum_dynamic_thumbnail_frame_title">Maximum Frame</string>
+
+    <string name="pref_videoviewmode_key">VideoviewMode</string>
+    <string name="pref_videoviewmode_key_title">Select VideoView Mode</string>
+
+    <string name="pref_surfacetexture_key">UseSurfaceTexture</string>
+    <string name="pref_renderthread_key">UseRenderThread</string>
+
+    <string name="pref_codecMode">Codec Mode</string>
+
+    <string-array name="pref_QAcodecMode_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_QAcodecMode_entries">
+        <item>SW only</item>
+        <item>HW only</item>
+        <item>SW-HW</item>
+    </string-array>
+
+    <string name="pref_cea608RenderMode">CEA608 Render Mode</string>
+    <string-array name="pref_cea608_render_modes">
+        <item>Default</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="pref_cea608_render_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_replayMode">Replay Mode</string>
+    <string-array name="pref_replay_mode_entries">
+        <item>Next</item>
+        <item>Again</item>
+        <item>Quit</item>
+    </string-array>
+    <string-array name="pref_replay_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="pref_home_button_mode_key">homeButtonMode</string>
+    <string name="pref_home_button_mode_title">Home Button Mode</string>
+    <string-array name="pref_home_button_mode_entries">
+        <item>Stop</item>
+        <item>Pause</item>
+    </string-array>
+    <string-array name="pref_home_button_mode_entry_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="pref_captionMode">Caption Mode</string>
+
+    <string-array name="pref_QACaptionMode_entries">
+        <item>CEA608</item>
+        <item>CEA708</item>
+    </string-array>
+    <string-array name="pref_QACaptionMode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="dolby_ac3_setting">Dolby AC3</string>
+    <string name="dolby_ac3_set_up">Dolby AC3&#160;Sound&#160;SetUp</string>
+    <string name="dolby_ac3_post_processing">Post&#160;Processing</string>
+    <string name="dolby_ac3_end_point">Dolby&#160;End&#160;Point</string>
+    <string name="dolby_ac3_enhance_gain">Dolby&#160;Enhancement&#160;Gain</string>
+
+    <string-array name="pref_dolby_ac3_end_point_entries">
+        <item>SPEAKER</item>
+        <item>HEADPHONE</item>
+    </string-array>
+    <string-array name="pref_dolby_ac3_post_processing_entries">
+        <item>OFF</item>
+        <item>ON</item>
+    </string-array>
+    <string-array name="pref_dolby_ac3_end_point_entry_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="dolby_ac4_setting">Dolby AC4</string>
+    <string name="dolby_ac4_set_up">Dolby AC4&#160;Sound&#160;SetUp</string>
+    <string name="dolby_ac4_virtualization">Virtualization</string>
+    <string name="dolby_ac4_enhance_gain">Dolby&#160;Enhancement&#160;Gain</string>
+    <string name="dolby_ac4_main_asso_pref">Main&#160;And&#160;Associated&#160;Audio</string>
+    <string name="dolby_ac4_presentation_index">Dolby&#160;Presentation&#160;Index</string>
+
+    <string-array name="pref_dolby_ac4_virtualization_entries">
+        <item>OFF</item>
+        <item>SPEAKER</item>
+        <item>HEADPHONE</item>
+    </string-array>
+    <string-array name="pref_dolby_ac4_virtualization_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="pref_renderMode">RenderMode</string>
+
+    <string-array name="pref_renderMode_entries">
+        <item>Auto</item>
+        <item>Android Renderer</item>
+        <item>OpenGL Renderer</item>
+        <item>HW OpenGL Renderer</item>
+        <item>HW Surface Renderer</item>
+
+    </string-array>
+    <string-array name="pref_renderMode_values">
+        <item>Auto</item>
+        <item>Android</item>
+        <item>OPENGL</item>
+        <item>HW OPENGL</item>
+        <item>HW Native</item>
+    </string-array>
+
+    <string-array name="pref_videoViewMode_entries">
+        <item>Normal(NexVideoRenderer)</item>
+        <item>TextureView(NexTextureView)</item>
+        <item>External SurfaceTexture</item>
+    </string-array>
+    <string-array name="pref_videoViewMode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="pref_EncodingPreset_title">Encoding Preset for local</string>
+
+    <string-array name="pref_text_encoding_name">
+        <item name="1">Arabic (ISO8859_6)</item>
+        <item name="2">Arabic (Cp1256)</item>
+        <item name="3">Baltic (Cp1257)</item>
+        <item name="4">Baltic (ISO8859_13)</item>
+        <item name="5">Baltic, Scandinavia (ISO8859_4)</item>
+        <item name="6">Celtic (ISO8859_14)</item>
+        <item name="7">Central European, Slavic (ISO8859_2)</item>
+        <item name="8">Chinese, Simplified (MS936)</item>
+        <item name="9">Chinese, Simplified (GB18030)</item>
+        <item name="10">Chinese, Simplified (EUC_CN)</item>
+        <item name="11">Chinese, Simplified (GBK)</item>
+        <item name="12">Chinese, Simplified (ISO2022_CN)</item>
+        <item name="13">Chinese, Traditional (Big5)</item>
+        <item name="14">Chinese, Traditional (Big5_HKSCS)</item>
+        <item name="15">Cyrillic (Cp1251)</item>
+        <item name="16">Cyrillic (ISO8859_5)</item>
+        <item name="17">Eastern European (Cp1250)</item>
+        <item name="18">Greek (Cp1253)</item>
+        <item name="19">Greek (ISO8859_7)</item>
+        <item name="20">Hebrew (ISO8859_8)</item>
+        <item name="21">Hebrew (Cp1255)</item>
+        <item name="22">Japanese (MS932)</item>
+        <item name="23">Japanese (EUC_JP)</item>
+        <item name="24">Japanese (ISO2022_JP)</item>
+        <item name="25">Korean (MS949)</item>
+        <item name="26">Korean (EUC_KR)</item>
+        <item name="27">Korean (ISO2022_KR)</item>
+        <item name="28">Nordic (ISO8859_10)</item>
+        <item name="29">Romanian (ISO8859_16)</item>
+        <item name="30">Russian (KOI8_R)</item>
+        <item name="31">South European (ISO8859_3)</item>
+        <item name="32">Thai (TIS620)</item>
+        <item name="33">Thai (ISO8859_11)</item>
+        <item name="34">Turkish (Cp1254)</item>
+        <item name="35">Turkish (ISO8859_9)</item>
+        <item name="36">Unicode (UTF-8)</item>
+        <item name="37">Unicode (UTF-16)</item>
+        <item name="38">Unicode (UTF-16BE)</item>
+        <item name="39">Unicode (UTF-32)</item>
+        <item name="40">Unicode (UTF-32BE)</item>
+        <item name="41">Unicode (UTF-32LE)</item>
+        <item name="42">US-ASCII (ASCII)</item>
+        <item name="43">Vietnamese (Cp1258)</item>
+        <item name="44">Western European (ISO8859_1)</item>
+        <item name="45">Western European (ISO8859_15)</item>
+        <item name="46">Western European(ANSI) (Cp1252)</item>
+    </string-array>
+    <string-array name="pref_text_encoding_value">
+        <item name="1">ISO8859_6</item>
+        <item name="2">Cp1256</item>
+        <item name="3">Cp1257</item>
+        <item name="4">ISO8859_13</item>
+        <item name="5">ISO8859_4</item>
+        <item name="6">ISO8859_14</item>
+        <item name="7">ISO8859_2</item>
+        <item name="8">MS936</item>
+        <item name="9">GB18030</item>
+        <item name="10">EUC_CN</item>
+        <item name="11">GBK</item>
+        <item name="12">ISO2022_CN</item>
+        <item name="13">Big5</item>
+        <item name="14">Big5_HKSCS</item>
+        <item name="15">Cp1251</item>
+        <item name="16">ISO8859_5</item>
+        <item name="17">Cp1250</item>
+        <item name="18">Cp1253</item>
+        <item name="19">ISO8859_7</item>
+        <item name="20">ISO8859_8</item>
+        <item name="21">Cp1255</item>
+        <item name="22">MS932</item>
+        <item name="23">EUC_JP</item>
+        <item name="24">ISO2022_JP</item>
+        <item name="25">MS949</item>
+        <item name="26">EUC_KR</item>
+        <item name="27">ISO2022_KR</item>
+        <item name="28">ISO8859_10</item>
+        <item name="29">ISO8859_16</item>
+        <item name="30">KOI8_R</item>
+        <item name="31">ISO8859_3</item>
+        <item name="32">TIS620</item>
+        <item name="33">ISO8859_11</item>
+        <item name="34">Cp1254</item>
+        <item name="35">ISO8859_9</item>
+        <item name="36">UTF-8</item>
+        <item name="37">UTF-16</item>
+        <item name="38">UTF-16BE</item>
+        <item name="39">UTF-32</item>
+        <item name="40">UTF-32BE</item>
+        <item name="41">UTF-32LE</item>
+        <item name="42">ASCII</item>
+        <item name="43">Cp1258</item>
+        <item name="44">ISO8859_1</item>
+        <item name="45">ISO8859_15</item>
+        <item name="46">Cp1252</item>
+    </string-array>
+
+    <string name="pref_useExternalPD">Use External PD</string>
+    <string name="pref_useExternalPD_desc">Use external Download Module</string>
+    <string name="pref_useExternalPD_on">on External Download Module</string>
+    <string name="pref_useExternalPD_off">off External Download Module</string>
+    <string name="pref_prevent_webvtt">Enable WebVTT Mode</string>
+    <string name="pref_prevent_webvtt_on">on Enable WebVTT Mode</string>
+    <string name="pref_prevent_webvtt_off">Disable WebVTT Mode</string>
+    <string name="pref_webvtt_waitopen">WEBVTT_WAITOPEN</string>
+    <string name="pref_webvtt_waitopen_on">Wait open() when download WebVTT</string>
+    <string name="pref_webvtt_waitopen_off">Do not wait open() when download WebVTT</string>
+    <string name="pref_hls_runmode_stable">HLS_ABR_RUNMODE</string>
+    <string name="pref_hls_runmode_stable_on">HLS ABR Run mode is stable</string>
+    <string name="pref_hls_runmode_stable_off">HLS ABR Run mode is default</string>
+    <string name="pref_prefer_language_audio_title">Input PreferLanguage Audio</string>
+    <string name="pref_prefer_language_audio_key">prefer_language_audio</string>
+    <string name="pref_prefer_language_text_title">Input PreferLanguage Text</string>
+    <string name="pref_prefer_language_text_key">prefer_language_text</string>
+    <string name="pref_cea608_ignore_textmode">Ignore text mode on CEA608</string>
+    <string name="pref_cea608_ignore_textmode_on">Ignore text mode command</string>
+    <string name="pref_cea608_ignore_textmode_off">Display default cea608</string>
+
+    <!-- the buffer information -->
+    <string name="buffer_open">connecting....</string>
+    <string name="buffer_start">Buffering 0%</string>
+    <string name="buffer_ing">Buffering </string>
+    <string name="buffer_percent">% </string>
+    <string name="contrast_title">Contrast  </string>
+    <string name="brightness_title">Brightness</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_popup">PoPup</string>
+    <string name="title_activity_video_on_off">VideoOnOff</string>
+
+    <string name="error_invalid_store_file">Invalid store info file!!</string>
+    <string name="error_continue_store">A</string>
+    <string-array name="nxb_dialog_items">
+        <item>Play</item>
+        <item>Store</item>
+    </string-array>
+    <string-array name="offline_dialog_items">
+        <item>Play</item>
+        <item>Continue Store</item>
+        <item>Delete</item>
+        <item>Store Info</item>
+    </string-array>
+    <string name="store_info">Store Info</string>
+    <!-- caption info -->
+    <string name="caption_title_size">Size</string>
+    <string name="caption_title_color">Color</string>
+    <string name="caption_title_background">Background</string>
+    <string name="caption_title_window">Window</string>
+    <string name="caption_title_igfnore">Ignore TextMode</string>
+    <string name="caption_title_shadow">Shadow Styles</string>
+    <string name="caption_title_boundingbox">Bounding Box</string>
+    <string name="caption_title_boundingbox_top">Top</string>
+    <string name="caption_title_boundingbox_left">Left</string>
+    <string name="caption_title_boundingbox_width">Width</string>
+    <string name="caption_title_boundingbox_height">Height</string>
+
+
+    <string name="font_effect">Font Effect</string>
+    <string name="caption_title_alignment">Alignment</string>
+
+    <string name="edge">Edge</string>
+
+    <string name="caption_title_opacity">Opacity</string>
+    <string name="caption_title_edge">Edge Attributes</string>
+    <string name="caption_title_shadow_color">Shadow Color</string>
+    <string name="caption_title_shadow_opacity">Shadow Opacity</string>
+
+    <string name="caption_title_bold">Bold</string>
+    <string name="caption_title_underline">Underline</string>
+    <string name="caption_title_italic">Italic</string>
+    <string name="caption_title_boundingbox_default">Use Default values of Contents</string>
+
+
+    <string name="error_occurred">Error occurred!</string>
+    <string name="imageview_contentDescription">image</string>
+    <string name="sucess">Clear Suceess! </string>
+    <string name="notification">noti_start</string>
+    <string name="content_info">Content Info</string>
+    <string name="pip">PIP</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+
+
+    <!--the popupplay part  end-->
+
+    <string name="pref_enable_client_side_timeshift_key">enable_client_side_timeshift</string>
+    <string name="pref_client_side_timeshift_off">Client-Side TimeShift OFF</string>
+    <string name="pref_client_side_timeshift">Client-Side TimeShift</string>
+    <string name="pref_client_side_timeshift_desc">Turn on/off client side TimeShift feature</string>
+    <string name="pref_client_size_timeshift_on">Client-Side TimeShift ON</string>
+
+    <string name="pref_timeshift_buffer_size_key">timeshift_buffer_size</string>
+    <string name="pref_timeshift_buffer_size">Maximum Buffer size for TimeShift(MByte)</string>
+    <string name="pref_timeshift_buffer_size_desc">Maximum Buffer size for TimeShift(MByte)</string>
+
+    <string name="pref_timeshift_buffer_duration_key">timeshift_buffer_duration</string>
+    <string name="pref_timeshift_buffer_duration">Maximum duration of TimeShift (Minute)</string>
+    <string name="pref_timeshift_buffer_duration_desc">Maximum duration of TimeShift (Minute)</string>
+
+
+
 </resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="40dip"
+              android:gravity="center" >
+        <include
+            layout="@layout/title_bar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/videoCheck"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dip"
+                android:gravity="center"
+                android:text="@string/menu_video_on"
+                android:checked="true"/>
+            <CheckBox
+                android:id="@+id/audioCheck"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/menu_audio_on"
+                android:checked="true"/>
+            <CheckBox
+                android:id="@+id/textCheck"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/menu_text_on"
+                android:checked="true"/>
+        </LinearLayout>
+</LinearLayout>

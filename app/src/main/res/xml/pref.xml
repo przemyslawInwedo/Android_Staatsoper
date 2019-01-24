@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- for Original Demo application -->
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:attr="http://schemas.android.com/apk/res-auto" >
+
+	<PreferenceScreen android:title="Basic" >
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="useUDP"
+			android:summary="@string/pref_useUDP_desc"
+			android:summaryOff="@string/pref_useUDP_off"
+			android:summaryOn="@string/pref_useUDP_on"
+			android:title="@string/pref_useUDP" >
+		</CheckBoxPreference>
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="useExternalPD"
+			android:summary="@string/pref_useExternalPD_desc"
+			android:summaryOff="@string/pref_useExternalPD_off"
+			android:summaryOn="@string/pref_useExternalPD_on"
+			android:title="@string/pref_useExternalPD" >
+		</CheckBoxPreference>
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="enabledtWebvtt"
+			android:summaryOff="@string/pref_prevent_webvtt_off"
+			android:summaryOn="@string/pref_prevent_webvtt_on"
+			android:title="@string/pref_prevent_webvtt" >
+		</CheckBoxPreference>
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_download_caption_dialog_key"
+			android:summaryOff="@string/pref_download_caption_dialog_off"
+			android:summaryOn="@string/pref_download_caption_dialog_on"
+			android:title="@string/pref_download_caption_dialog_title" >
+		</CheckBoxPreference>
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_subtitle_download_path_key"
+			android:title="@string/pref_subtitle_download_path"
+			android:defaultValue="@string/pref_subtitle_download_path_default_value"
+			attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="ignoreTextmode"
+			android:summaryOff="@string/pref_cea608_ignore_textmode_on"
+			android:summaryOn="@string/pref_cea608_ignore_textmode_off"
+			android:title="@string/pref_cea608_ignore_textmode" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="0"
+			android:entries="@array/pref_cea608_render_modes"
+			android:entryValues="@array/pref_cea608_render_values"
+			android:key="cea608RenderMode"
+			android:summary="summary"
+			android:title="@string/pref_cea608RenderMode" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="2"
+			android:entries="@array/pref_replay_mode_entries"
+			android:entryValues="@array/pref_replay_mode_values"
+			android:key="replayMode"
+			android:summary="summary"
+			android:title="@string/pref_replayMode" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="WebvttWaitOpen"
+			android:summaryOff="@string/pref_webvtt_waitopen_off"
+			android:summaryOn="@string/pref_webvtt_waitopen_on"
+			android:title="@string/pref_webvtt_waitopen" >
+		</CheckBoxPreference>
+
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="HLSRunModeStable"
+			android:summaryOff="@string/pref_hls_runmode_stable_off"
+			android:summaryOn="@string/pref_hls_runmode_stable_on"
+			android:title="@string/pref_hls_runmode_stable" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_prefer_language_audio_key"
+			android:defaultValue="defaultValue"
+			android:title="@string/pref_prefer_language_audio_title"
+			android:summary="summary"
+			attr:inputformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$"
+			attr:completeformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_prefer_language_text_key"
+			android:defaultValue="defaultValue"
+			android:title="@string/pref_prefer_language_text_title"
+			android:summary="summary"
+			attr:inputformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$"
+			attr:completeformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_start_nearest_bw_key"
+			android:defaultValue="0"
+			android:title="@string/pref_start_nearest_bw_title"
+			android:summary="summary"
+			attr:inputformat="^[[0-9]]{1,}?$"
+			attr:completeformat="^[[0-9]]{1,}?$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_start_sec_key"
+			android:defaultValue="0"
+			android:title="@string/pref_start_sec_title"
+			android:summary="summary"
+			attr:inputformat="^[[0-9]]{1,}?$"
+			attr:completeformat="^[[0-9]]{1,}?$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="@string/pref_enableAudioOnlyTrack_key"
+			android:summaryOff="@string/pref_enableAudioOnlyTrack_off"
+			android:summaryOn="@string/pref_enableAudioOnlyTrack_on"
+			android:title="@string/pref_enableAudioOnlyTrack_title" >
+		</CheckBoxPreference>
+
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="@string/pref_enableUpdateBW_key"
+			android:summaryOff="@string/pref_enableUpdateBW_off"
+			android:summaryOn="@string/pref_enableUpdateBW_on"
+			android:title="@string/pref_enableUpdateBW_title" >
+		</CheckBoxPreference>
+
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_stable_audio_key"
+			android:title="@string/pref_stable_audio_title" >
+		</CheckBoxPreference>
+
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_stable_video_key"
+			android:title="@string/pref_stable_video_title" >
+		</CheckBoxPreference>
+
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_enable_id3_ttml_key"
+			android:summary="@string/pref_enable_id3_ttml_decs"
+			android:summaryOff="@string/disable"
+			android:summaryOn="@string/enable"
+			android:title="@string/pref_id3_ttml_title" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="0"
+			android:entries="@array/pref_QACaptionMode_entries"
+			android:entryValues="@array/pref_QACaptionMode_values"
+			android:key="captionMode"
+			android:summary="summary"
+			android:title="@string/pref_captionMode" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="0"
+			android:entries="@array/pref_loglevel_values"
+			android:entryValues="@array/pref_loglevel_values"
+			android:key="logLevel"
+			android:summary="summary"
+			android:title="@string/pref_loglevel" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="Auto"
+			android:entries="@array/pref_renderMode_entries"
+			android:entryValues="@array/pref_renderMode_values"
+			android:key="renderMode"
+			android:summary="summary"
+			android:title="@string/pref_renderMode" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="1"
+			android:entries="@array/pref_home_button_mode_entries"
+			android:entryValues="@array/pref_home_button_mode_entry_values"
+			android:key="@string/pref_home_button_mode_key"
+			android:title="@string/pref_home_button_mode_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="1"
+			android:entries="@array/pref_colorSpace_entries"
+			android:entryValues="@array/pref_colorSpace_values"
+			android:key="colorSpace"
+			android:summary="summary"
+			android:title="@string/pref_colorSpace" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="UTF-8"
+			android:entries="@array/pref_text_encoding_name"
+			android:entryValues="@array/pref_text_encoding_value"
+			android:key="TextEncoding Preset"
+			android:summary="summary"
+			android:title="@string/pref_EncodingPreset_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="eyePleaser"
+			android:summary="@string/pref_eyePleaser_desc"
+			android:summaryOff="@string/pref_eyePleaser_off"
+			android:summaryOn="@string/pref_eyePleaser_on"
+			android:title="@string/pref_eyePleaser" >
+		</CheckBoxPreference>
+
+		<CheckBoxPreference
+			android:key="StatisticsMonitor"
+			android:defaultValue="false"
+			android:title="@string/pref_statistics_monitor"
+			android:summary="@string/pref_statistics_monitor_desc"
+			android:summaryOn="@string/pref_statistics_monitor_on"
+			android:summaryOff="@string/pref_statistics_monitor_off" >
+		</CheckBoxPreference>
+
+		<!--
+     <CheckBoxPreference 
+    android:key="MulticoreSupport"
+    android:defaultValue="true"
+    android:summaryOff="Multicore Codec turn Off"
+    android:title="Multicore support"
+    android:summary="MultiCore CPU Supports on Codec"
+    android:summaryOn="Multicore Codec turn On">
+    </CheckBoxPreference>
+        -->
+
+
+
+		<!--
+     <CheckBoxPreference 
+    android:key="rgb566only"
+    android:defaultValue="false"
+    android:summaryOff="@string/pref_rgb565_off"
+    android:title="@string/pref_rgb565"
+    android:summary="@string/pref_rgb565_desc"
+    android:summaryOn="@string/pref_rgb565_on">
+    </CheckBoxPreference>
+        -->
+
+		<!--    <com.nexstreaming.apis.ListPrefWithSummary
+               android:defaultValue="UTF-8"
+               android:entries="@array/pref_EncodingPreset_entries"
+               android:entryValues="@array/pref_EncodingPreset_entries"
+               android:key="TextEncoding Preset"
+               android:summary="summary"
+               android:title="@string/pref_EncodingPreset" >
+           </com.nexstreaming.apis.ListPrefWithSummary> -->
+
+		<!-- <CheckBoxPreference android:summaryOff="@string/pref_filterVideo_off" android:key="filterVideo" android:summaryOn="@string/pref_filterVideo_on" android:title="@string/pref_filterVideo" android:summary="@string/pref_filterVideo_desc" android:defaultValue="false"></CheckBoxPreference> -->
+		<!--
+<CheckBoxPreference android:key="useUDP" android:defaultValue="true" android:summaryOff="@string/pref_useUDP_off" android:summaryOn="@string/pref_useUDP_on" android:title="@string/pref_useUDP" android:summary="@string/pref_useUDP_desc"></CheckBoxPreference>
+<CheckBoxPreference android:key="smoothSkipping" android:defaultValue="false" android:summaryOff="@string/pref_smoothSkipping_off" android:title="@string/pref_smoothSkipping" android:summary="@string/pref_smoothSkipping_desc" android:summaryOn="@string/pref_smoothSkipping_on"></CheckBoxPreference>
+<CheckBoxPreference android:key="rgb566only" android:defaultValue="false" android:summaryOff="@string/pref_rgb565_off" android:title="@string/pref_rgb565" android:summary="@string/pref_rgb565_desc" android:summaryOn="@string/pref_rgb565_on"></CheckBoxPreference>
+
+        -->
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="10240"
+			min="0"
+			unitLabel="kbps"
+			android:defaultValue="0"
+			android:key="@string/pref_max_bandwidth_key"
+			android:title="@string/pref_max_bandwidth_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="10240"
+			min="0"
+			unitLabel="kbps"
+			android:defaultValue="0"
+			android:key="@string/pref_min_bandwidth_key"
+			android:title="@string/pref_min_bandwidth_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="60"
+			min="1"
+			unitLabel="seconds"
+			android:defaultValue="5"
+			android:key="@string/pref_seek_offset_key"
+			android:title="@string/pref_seek_offset">
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="0.25"
+			max="10"
+			min="0"
+			unitLabel="seconds"
+			android:defaultValue="0"
+			android:key="@string/pref_buffering_time_key"
+			android:title="@string/pref_buffering_time">
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="0.05"
+			max="1"
+			min="-1"
+			unitLabel="seconds"
+			android:defaultValue="0"
+			android:key="AVSyncOffset"
+			android:title="AV Sync Offset" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="10"
+			max="0"
+			min="-100"
+			unitLabel="msec"
+			android:defaultValue="-50"
+			android:key="VideoDisplayWait"
+			android:title="Video Display Wait Offset" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="10"
+			max="500"
+			min="0"
+			unitLabel="msec"
+			android:defaultValue="70"
+			android:key="VideoDisplaySkip"
+			android:title="Video Display Skip Offset" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="Low Latency" >
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_lowlatencyEnable_key"
+			android:summary="@string/pref_lowlatencyEnable_desc"
+			android:summaryOff="@string/pref_lowlatencyEnable_off"
+			android:summaryOn="@string/pref_lowlatencyEnable_on"
+			android:title="@string/pref_lowlatencyEnable" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="100"
+			max="10000"
+			min="200"
+			unitLabel="ms"
+			android:defaultValue="500"
+			android:key="@string/pref_lowlatencyValue_key"
+			android:dependency="@string/pref_lowlatencyEnable_key"
+			android:title="set a latency value" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="SPD Settings">
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_SPDEnable_key"
+			android:summaryOff="@string/pref_SPDEnable_off"
+			android:summaryOn="@string/pref_SPDEnable_on"
+			android:title="@string/pref_SPDEnable">
+		</CheckBoxPreference>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="100"
+			max="20000"
+			min="500"
+			unitLabel="ms"
+			android:defaultValue="2000"
+			android:dependency="@string/pref_SPDEnable_key"
+			android:key="@string/pref_SPDValue_key"
+			android:title="set a SPD value"></app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+	</PreferenceScreen>
+
+
+	<PreferenceScreen android:title="@string/pref_drm_options_title" >
+		<!-- NexMediaDrm start-->
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="@string/pref_enable_media_drm_key"
+			android:summaryOff="@string/pref_enable_media_drm_off"
+			android:summaryOn="@string/pref_enable_media_drm_on"
+			android:title="@string/pref_enable_media_drm_title" />
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_media_drm_server_key_uri_key"
+			android:defaultValue="@string/pref_media_drm_server_key_uri_default"
+			android:title="@string/server_key_uri"
+			android:summary="summary"
+			attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+		<!-- NexMediaDrm end-->
+		<!-- NexWVSWDrm start-->
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="@string/pref_enable_sw_drm_Key"
+			android:summaryOff="@string/pref_enable_sw_drm_off"
+			android:summaryOn="@string/pref_enable_sw_drm_on"
+			android:title="@string/pref_enable_sw_drm_title" />
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_enable_sw_drm_print_all_logs_key"
+			android:summaryOff="@string/pref_enable_sw_drm_print_all_logs_off"
+			android:summaryOn="@string/pref_enable_sw_drm_print_all_logs_on"
+			android:title="@string/pref_enable_sw_drm_print_all_logs_title" />
+		<!--<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted-->
+		<!--android:key="@string/pref_swdrm_server_key_uri_key"-->
+		<!--android:defaultValue="@string/pref_swdrm_server_key_uri_default"-->
+		<!--android:title="@string/pref_swdrm_server_key_uri_title"-->
+		<!--android:summary="summary"-->
+		<!--attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"-->
+		<!--attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">-->
+		<!--</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>-->
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceSWDRMCache
+			android:key="@string/pref_swdrm_key"
+			android:title="Clear SWDRM cert file"
+			android:summary="Do you want to clear the stored certification files ?"
+			android:defaultValue="100" />
+		<!-- NexWVSWDrm end-->
+	</PreferenceScreen>
+	<PreferenceScreen android:title="Dynamic Thumbnail">
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_dynamic_thumbnail_key"
+			android:summaryOn="@string/pref_dynamic_thumbnail_on"
+			android:summaryOff="@string/pref_dynamic_thumbnail_off"
+			android:title="@string/pref_dynamic_thumbnail_title" >
+		</CheckBoxPreference>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="100"
+			min="10"
+			unitLabel=""
+			android:defaultValue="10"
+			android:key="@string/pref_maximum_dynamic_thumbnail_frame_key"
+			android:title="@string/pref_maximum_dynamic_thumbnail_frame_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="@string/dolby_ac3_setting">
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="0"
+			android:entries="@array/pref_dolby_ac3_post_processing_entries"
+			android:entryValues="@array/pref_dolby_ac3_end_point_entry_values"
+			android:summary="summary"
+			android:key="@string/dolby_ac3_post_processing"
+			android:title="@string/dolby_ac3_post_processing" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="0"
+			android:entries="@array/pref_dolby_ac3_end_point_entries"
+			android:entryValues="@array/pref_dolby_ac3_end_point_entry_values"
+			android:summary="summary"
+			android:key="@string/dolby_ac3_end_point"
+			android:title="@string/dolby_ac3_end_point" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="12"
+			min="0"
+			android:defaultValue="0"
+			android:key="@string/dolby_ac3_enhance_gain"
+			android:title="@string/dolby_ac3_enhance_gain" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="@string/dolby_ac4_setting">
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="0"
+			android:entries="@array/pref_dolby_ac4_virtualization_entries"
+			android:entryValues="@array/pref_dolby_ac4_virtualization_entry_values"
+			android:summary="summary"
+			android:key="@string/dolby_ac4_virtualization"
+			android:title="@string/dolby_ac4_virtualization" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="12"
+			min="0"
+			android:defaultValue="0"
+			android:key="@string/dolby_ac4_enhance_gain"
+			android:title="@string/dolby_ac4_enhance_gain" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="32"
+			min="-32"
+			android:defaultValue="0"
+			android:key="@string/dolby_ac4_main_asso_pref"
+			android:title="@string/dolby_ac4_main_asso_pref" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="510"
+			min="-1"
+			defaultTextAtMin="Default Value"
+			android:defaultValue="-1"
+			android:key="@string/dolby_ac4_presentation_index"
+			android:title="@string/dolby_ac4_presentation_index" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="Dump" >
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_pcm_dumpEnable_key"
+			android:summaryOff="@string/pref_pcm_dumpEnable_off"
+			android:summaryOn="@string/pref_pcm_dumpEnable_on"
+			android:title="@string/pref_pcm_dumpEnable" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_pcm_dumpPath_key"
+			android:defaultValue="@string/pref_pcm_dumpPath_default"
+			android:title="@string/pref_pcm_dumpPath"
+			android:summary="summary"
+			attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			android:dependency="@string/pref_pcm_dumpEnable_key">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_ts_dumpEnable_key"
+			android:summaryOff="@string/pref_ts_dumpEnable_off"
+			android:summaryOn="@string/pref_ts_dumpEnable_on"
+			android:title="@string/pref_ts_dumpEnable" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_ts_dumpPath_key"
+			android:defaultValue="@string/pref_ts_dumpPath_default"
+			android:title="@string/pref_ts_dumpPath"
+			android:layout="?android:attr/preferenceLayoutChild"
+			android:summary="summary"
+			attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			android:dependency="@string/pref_ts_dumpEnable_key">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="Debug Log" >
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="-1"
+			android:entries="@array/pref_debug_logs_values"
+			android:entryValues="@array/pref_debug_logs_values"
+			android:summary="summary"
+			android:key="@string/pref_debug_codec_key"
+			android:title="@string/pref_debug_codec_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
+			android:defaultValue="-1"
+			android:entries="@array/pref_debug_logs_values"
+			android:entryValues="@array/pref_debug_logs_values"
+			android:summary="summary"
+			android:key="@string/pref_debug_renderer_key"
+			android:title="@string/pref_debug_renderer_title" >
+		</app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.CheckBoxDialogPreference
+			android:title="@string/pref_debug_protocol_title"
+			android:positiveButtonText="@string/ok"
+			android:negativeButtonText="@string/cancel" />
+
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="Offline Playback" >
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="offlineCacheLocation"
+			android:defaultValue="/sdcard/NexPlayerCache/"
+			android:title="@string/pref_offline_cache_location"
+			android:summary="summary"
+			attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
+			attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_offline_info_file_path_key"
+			android:defaultValue="/sdcard/NexPlayerCache/"
+			android:title="@string/pref_offline_info_file_path_Location"
+			android:summary="summary"
+			attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$"
+			attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="100"
+			max="5000"
+			min="100"
+			unitLabel="kbps"
+			android:defaultValue="3000"
+			android:key="storeTrackBW"
+			android:title="Stored Track BW" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+		<PreferenceCategory android:title="@string/multi_track_audio">
+			<CheckBoxPreference
+				android:key="@string/pref_store_all_audio_streams_key"
+				android:defaultValue="false"
+				android:disableDependentsState="true"
+				android:title="@string/pref_store_all_streams_title"
+				/>
+			<CheckBoxPreference
+				android:key="@string/pref_offline_audio_use_default_id_key"
+				android:defaultValue="true"
+				android:disableDependentsState="true"
+				android:dependency="@string/pref_store_all_audio_streams_key"
+				android:title="@string/pref_offline_use_default_id_title" />
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_stream_id_audio_key"
+				android:defaultValue="0"
+				android:title="@string/pref_offline_stream_id_audio_title"
+				android:summary="summary"
+				android:dependency="@string/pref_offline_audio_use_default_id_key"
+				attr:inputformat="^[0-9]{1,10}$"
+				attr:completeformat="^[0-9]{1,10}$"/>
+
+			<CheckBoxPreference
+				android:key="@string/pref_offline_audio_use_default_track_id_key"
+				android:defaultValue="true"
+				android:disableDependentsState="true"
+				android:dependency="@string/pref_store_all_audio_streams_key"
+				android:title="@string/pref_offline_use_default_track_id_title" />
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_input_track_id_key"
+				android:defaultValue="0"
+				android:title="@string/pref_offline_input_track_id_title"
+				android:summary="summary"
+				android:dependency="@string/pref_offline_audio_use_default_track_id_key"
+				attr:inputformat="^[0-9]{1,10}$"
+				attr:completeformat="^[0-9]{1,10}$"/>
+
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_prefer_language_audio_key"
+				android:defaultValue="defaultValue"
+				android:title="@string/pref_offline_prefer_language_audio_title"
+				android:summary="summary"
+				attr:inputformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$"
+				attr:completeformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$">
+			</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+		</PreferenceCategory>
+
+		<PreferenceCategory android:title="@string/multi_track_video">
+			<CheckBoxPreference
+				android:key="@string/pref_store_all_video_streams_key"
+				android:defaultValue="false"
+				android:disableDependentsState="true"
+				android:title="@string/pref_store_all_streams_title"
+				/>
+			<CheckBoxPreference
+				android:key="@string/pref_offline_video_use_default_id_key"
+				android:defaultValue="true"
+				android:disableDependentsState="true"
+				android:dependency="@string/pref_store_all_video_streams_key"
+				android:title="@string/pref_offline_use_default_id_title"
+				/>
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_stream_id_video_key"
+				android:defaultValue="0"
+				android:title="@string/pref_offline_stream_id_video_title"
+				android:summary="summary"
+				android:dependency="@string/pref_offline_video_use_default_id_key"
+				attr:inputformat="^[0-9]{1,10}$"
+				attr:completeformat="^[0-9]{1,10}$"/>
+		</PreferenceCategory>
+
+		<PreferenceCategory android:title="@string/multi_track_text">
+			<CheckBoxPreference
+				android:key="@string/pref_store_all_text_streams_key"
+				android:defaultValue="false"
+				android:disableDependentsState="true"
+				android:title="@string/pref_store_all_streams_title"
+				/>
+			<CheckBoxPreference
+				android:key="@string/pref_offline_text_use_default_id_key"
+				android:defaultValue="true"
+				android:disableDependentsState="true"
+				android:dependency="@string/pref_store_all_text_streams_key"
+				android:title="@string/pref_offline_use_default_id_title"
+				/>
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_stream_id_text_key"
+				android:defaultValue="0"
+				android:title="@string/pref_offline_stream_id_text_title"
+				android:summary="summary"
+				android:dependency="@string/pref_offline_text_use_default_id_key"
+				attr:inputformat="^[0-9]{1,10}$"
+				attr:completeformat="^[0-9]{1,10}$"/>
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_prefer_language_text_key"
+				android:defaultValue="defaultValue"
+				android:title="@string/pref_offline_prefer_language_text_title"
+				android:summary="summary"
+				attr:inputformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$"
+				attr:completeformat="^[[a-zA-Z][0-9][\\-\\_\\:\\/\\.\\s]]*$">
+			</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+		</PreferenceCategory>
+
+		<PreferenceCategory android:title="@string/multi_track_custom">
+			<CheckBoxPreference
+				android:key="@string/pref_offline_custom_use_default_id_key"
+				android:defaultValue="true"
+				android:disableDependentsState="true"
+				android:title="@string/pref_offline_use_default_id_title"
+				/>
+
+			<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+				android:key="@string/pref_offline_stream_id_custom_attr_key"
+				android:defaultValue="0"
+				android:title="@string/pref_offline_stream_id_custom_attr_title"
+				android:summary="summary"
+				android:dependency="@string/pref_offline_custom_use_default_id_key"
+				attr:inputformat="^[0-9]+$"
+				attr:completeformat="^[0-9]+$"/>
+		</PreferenceCategory>
+
+	</PreferenceScreen>
+
+	<PreferenceScreen android:title="Trackdown" >
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="@string/pref_trackdownEnable_key"
+			android:summary="@string/pref_trackdownEnable_desc"
+			android:summaryOff="@string/pref_trackdownEnable_off"
+			android:summaryOn="@string/pref_trackdownEnable_on"
+			android:title="@string/pref_trackdownEnable" >
+		</CheckBoxPreference>
+
+		<app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
+			interval="1"
+			max="100"
+			min="0"
+			unitLabel="percents"
+			android:defaultValue="70"
+			android:key="@string/pref_trackdownThreshold_key"
+			android:dependency="@string/pref_trackdownEnable_key"
+			android:title="Trackdown Threshold" >
+		</app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+	</PreferenceScreen>
+
+
+	<PreferenceScreen
+		android:title="Client-Side TimeShift">
+		<CheckBoxPreference
+			android:key="@string/pref_enable_client_side_timeshift_key"
+			android:defaultValue="false"
+			android:summaryOff="@string/pref_client_side_timeshift_off"
+			android:title="@string/pref_client_side_timeshift"
+			android:summary="@string/pref_client_side_timeshift_desc"
+			android:summaryOn="@string/pref_client_size_timeshift_on">
+		</CheckBoxPreference>
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_timeshift_buffer_size_key"
+			android:defaultValue="100"
+			android:title="@string/pref_timeshift_buffer_size"
+			android:summary="@string/pref_timeshift_buffer_size_desc"
+			attr:inputformat="^[0-9]+$"
+			attr:completeformat="^[0-9]+$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+		<app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
+			android:key="@string/pref_timeshift_buffer_duration_key"
+			android:defaultValue="10"
+			android:title="@string/pref_timeshift_buffer_duration"
+			android:summary="@string/pref_timeshift_buffer_duration_desc"
+			attr:inputformat="^[0-9]+$"
+			attr:completeformat="^[0-9]+$">
+		</app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
+	</PreferenceScreen>
+
+
+</PreferenceScreen>

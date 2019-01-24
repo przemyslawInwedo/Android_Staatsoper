@@ -9,24 +9,21 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
-import app.nunc.com.staatsoperlivestreaming.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.Presenter.AvailableStreamsPresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
+import app.nunc.com.staatsoperlivestreaming.View.EventsView;
 
 import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
 
 public class VideothequeFragment extends Fragment implements EventsView {
 
-    public static List<Events> events = new ArrayList<>();
     private AvailableStreamsPresenter availableStreamsPresenter;
     private ListView listView;
     private ListAdapter listAdapter;
@@ -36,13 +33,11 @@ public class VideothequeFragment extends Fragment implements EventsView {
     private RelativeLayout emptyList;
 
     public VideothequeFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         availableStreamsPresenter = new AvailableStreamsPresenter(this);
         View view = inflater.inflate(R.layout.fragment_videotheque, container, false);
         listView = view.findViewById(R.id.list);
@@ -54,9 +49,9 @@ public class VideothequeFragment extends Fragment implements EventsView {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Bundle bundle = new Bundle();
-                bundle.putInt("position", i);
+                bundle.putInt("position", position);
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
                 singleEventFragment.setArguments(bundle);
                 FragmentManager manager = getActivity().getSupportFragmentManager();
@@ -67,7 +62,6 @@ public class VideothequeFragment extends Fragment implements EventsView {
                         .commit();
             }
         });
-
         return view;
     }
 
@@ -86,7 +80,6 @@ public class VideothequeFragment extends Fragment implements EventsView {
         {
             emptyList.setVisibility(View.VISIBLE);
         }
-
         listView.setAdapter(listAdapter);
     }
 
@@ -98,11 +91,9 @@ public class VideothequeFragment extends Fragment implements EventsView {
     @Override
     public void hideProgress() {
         progress.setVisibility(View.GONE);
-
     }
 
     @Override
     public void onError(Throwable e) {
-
     }
 }

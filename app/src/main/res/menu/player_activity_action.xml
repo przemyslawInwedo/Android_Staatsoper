@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:id="@+id/action_content_info"
+		  android:icon="@android:drawable/ic_dialog_info"
+		  android:title="@string/content_info"
+		  app:showAsAction="ifRoom" />
+	<item android:id="@+id/action_pip"
+		android:title="@string/pip"
+		app:showAsAction="never"
+		android:visible="false"/>
+	<item android:id="@+id/action_multi_stream"
+		  android:title="@string/multi_stream"
+		  app:showAsAction="never"/>
+	<item android:id="@+id/video"
+		android:title="@string/multi_track_video"
+		app:showAsAction="never">
+		<menu>
+			<item android:id="@+id/action_scale"
+			android:title="@string/scale_mode"
+			app:showAsAction="never"/>
+		</menu>
+	</item>
+
+	<item android:id="@+id/audio"
+		android:title="@string/multi_track_audio"
+		app:showAsAction="never">
+		<menu>
+			<item android:id="@+id/action_volume"
+				android:title="@string/volume"
+				app:showAsAction="never"/>
+			<item android:id="@+id/action_dolby_ac3_sound"
+				android:title="@string/dolby_ac3_sound"
+				app:showAsAction="never"
+				android:visible="false"/>
+			<item android:id="@+id/action_dolby_ac4_sound"
+				android:title="@string/dolby_ac4_sound"
+				app:showAsAction="never"
+				android:visible="false"/>
+		</menu>
+	</item>
+
+	<item android:id="@+id/text"
+		android:title="@string/multi_track_text"
+		app:showAsAction="never">
+		<menu>
+			<item android:id="@+id/action_caption_style"
+				android:title="@string/caption_style"
+				app:showAsAction="never"/>
+			<item android:id="@+id/action_language"
+				android:title="@string/select_language"
+				app:showAsAction="never"
+				android:visible="false"/>
+			<item android:id="@+id/action_subtitle"
+				android:title="@string/change_subtitle"
+				app:showAsAction="never"
+				android:visible="false"/>
+		</menu>
+	</item>
+
+	<item
+		android:id="@+id/bandwidth"
+		android:title="@string/band_width"
+		android:icon="@android:drawable/btn_dropdown"
+		app:showAsAction="never|withText">
+        <menu>
+            <item android:id="@+id/action_min_max_bandwidth"
+                android:title="@string/min_max_band_width"
+                app:showAsAction="never"/>
+            <item android:id="@+id/action_target_bandwidth"
+                android:title="@string/target_bandwidth"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+
+	<item android:id="@+id/action_statistics"
+		  android:title="@string/statistics"
+		  app:showAsAction="never"
+		  android:visible="false"/>
+</menu>

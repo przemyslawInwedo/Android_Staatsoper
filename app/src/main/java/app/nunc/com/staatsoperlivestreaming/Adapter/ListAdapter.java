@@ -1,8 +1,6 @@
 package app.nunc.com.staatsoperlivestreaming.Adapter;
 
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +18,6 @@ import java.util.Date;
 import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
-import app.nunc.com.staatsoperlivestreaming.Fragment.SingleEventFragment;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.R;
 import io.reactivex.annotations.NonNull;
@@ -50,7 +47,7 @@ public class ListAdapter extends ArrayAdapter<Results> {
         ImageView coverPhoto = listItem.findViewById(R.id.cover_photo);
         String photoUrl = currentResult.getMetaDataList().getImg();
 
-        Picasso.get().load(photoUrl).error(R.drawable.ic_image_placeholder_big).fit().into(coverPhoto, new Callback() {
+        Picasso.get().load(photoUrl).fit().into(coverPhoto, new Callback() {
             @Override
             public void onSuccess() {
             }
@@ -60,8 +57,6 @@ public class ListAdapter extends ArrayAdapter<Results> {
                 Log.d("PICASSO_ERROR", e.getMessage());
             }
         });
-
-        //ImageView iv_avatar = listItem.findViewById(R.id.iv_avatar);
 
         TextView tvDirector = listItem.findViewById(R.id.tv_director);
         tvDirector.setText(currentResult.getMetaDataList().getTitle_ext());
