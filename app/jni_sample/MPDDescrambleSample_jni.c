@@ -17,7 +17,7 @@
 #include <android/log.h>
 
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_MPDDESCRAMBLE_CALLBACK_FUNC "nexPlayerSWP_RegisterMPDDescrambleCallbackFunc"
 #define NEXPLAYERENGINE_MPDDESCRAMBLE_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterMPDDescrambleCallbackFunc_Multi"
                                                         

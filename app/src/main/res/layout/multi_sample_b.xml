@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-    <com.nexstreaming.nexplayerengine.NexVideoRenderer 
+    <app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexVideoRenderer
     	android:id="@+id/videoview"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent" />
@@ -53,19 +53,19 @@
         android:textColor="#ff000000"
         android:background="#fffff000" />
      
-     <com.nexstreaming.nexplayerengine.NexCaptionRenderer
+     <app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexCaptionRenderer
         android:id="@+id/caption_renderer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-     <com.nexstreaming.nexplayerengine.NexEIA708CaptionView
+     <app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexEIA708CaptionView
         android:id="@+id/_708_caption_renderer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-     <com.nexstreaming.nexplayerengine.NexCaptionRendererForTimedText
+     <app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexCaptionRendererForTimedText
         android:id="@+id/timed_caption_renderer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-     <com.nexstreaming.nexplayerengine.NexCaptionRendererForWebVTT
+     <app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexCaptionRendererForWebVTT
         android:id="@+id/webvtt_caption_renderer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />

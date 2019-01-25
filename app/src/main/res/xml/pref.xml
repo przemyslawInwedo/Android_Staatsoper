@@ -256,14 +256,14 @@
     </CheckBoxPreference>
         -->
 
-		<!--    <com.nexstreaming.apis.ListPrefWithSummary
+		<!--    <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
                android:defaultValue="UTF-8"
                android:entries="@array/pref_EncodingPreset_entries"
                android:entryValues="@array/pref_EncodingPreset_entries"
                android:key="TextEncoding Preset"
                android:summary="summary"
                android:title="@string/pref_EncodingPreset" >
-           </com.nexstreaming.apis.ListPrefWithSummary> -->
+           </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary> -->
 
 		<!-- <CheckBoxPreference android:summaryOff="@string/pref_filterVideo_off" android:key="filterVideo" android:summaryOn="@string/pref_filterVideo_on" android:title="@string/pref_filterVideo" android:summary="@string/pref_filterVideo_desc" android:defaultValue="false"></CheckBoxPreference> -->
 		<!--

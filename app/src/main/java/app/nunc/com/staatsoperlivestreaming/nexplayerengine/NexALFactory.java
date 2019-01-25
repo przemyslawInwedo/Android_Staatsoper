@@ -75,7 +75,7 @@ public final class NexALFactory {
           System.loadLibrary("nexalfactory");
           NexLog.d(TAG,"Loading nexalfactory.");
         }
-    }       
+    }
         
     /** 
      * \brief  Checks whether the current device can use native decoders or not.
@@ -438,7 +438,7 @@ public final class NexALFactory {
      * @param pixelFormat
      *            The pixel format to use when using the Java renderer. 
      *            For more information, see the <i>Java Renderer</i> section of
-     *            \link com.nexstreaming.nexplayerengine nexplayerengine\endlink.
+     *            \link app.nunc.com.staatsoperlivestreaming.nexplayerengine nexplayerengine\endlink.
      *              - <b>1:</b> RGBA 8888
      *              - <b>4:</b> RGB 565 
      */
@@ -482,11 +482,11 @@ public final class NexALFactory {
      * each error constant is an object, but it can be converted to or from a numerical
      * code using the instance and class methods.
      * 
-     * To get the error constant of a given code, call:  {@link com.nexstreaming.nexplayerengine.NexALFactory.NexALFactoryErrorCode#fromIntegerValue(int) fromIntegerValue(int)}.
+     * To get the error constant of a given code, call:  {@link app.nunc.com.staatsoperlivestreaming.NexALFactory.NexALFactoryErrorCode#fromIntegerValue(int) fromIntegerValue(int)}.
      *
-     * To get the error description given an error constant, call:  {@link com.nexstreaming.nexplayerengine.NexALFactory.NexALFactoryErrorCode#getDesc() getDesc()}.
+     * To get the error description given an error constant, call:  {@link app.nunc.com.staatsoperlivestreaming.NexALFactory.NexALFactoryErrorCode#getDesc() getDesc()}.
      * 
-     * To get the error code given an error constant, call:  {@link com.nexstreaming.nexplayerengine.NexALFactory.NexALFactoryErrorCode#getIntegerCode() getIntegerCode()}.
+     * To get the error code given an error constant, call:  {@link app.nunc.com.staatsoperlivestreaming.NexALFactory.NexALFactoryErrorCode#getIntegerCode() getIntegerCode()}.
      *
      * Because this is a Java \c enum, it is very easy to include the name of the
      * error constant in error messages instead of just the number values.  For example, the following

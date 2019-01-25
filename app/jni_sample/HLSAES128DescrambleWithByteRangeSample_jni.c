@@ -19,7 +19,7 @@
 #include <string.h>
 #include <android/log.h>
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_HLSAES128DESCRAMBLE_WITH_BYTE_RANGE_CALLBACK_FUNC "nexPlayerSWP_RegisterHLSAES128DescrambleWithByteRangeCallBackFunc"
 #define NEXPLAYERENGINE_HLSAES128DESCRAMBLE_WITH_BYTE_RANGE_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterHLSAES128DescrambleWithByteRangeCallBackFunc_Multi"
 

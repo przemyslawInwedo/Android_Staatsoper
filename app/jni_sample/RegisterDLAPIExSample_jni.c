@@ -17,7 +17,7 @@
 #include <android/log.h>
 
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_GETDLAPI_CALLBACK_FUNC "nexPlayerSWP_RegisterDLAPICallbackFunc"
                                                         
 
@@ -43,7 +43,7 @@ void* DLOpenCallbackFunc(const char* filename, int flag)
 	char strPath[1024];
 	memset(strPath, 0, 1024);
 
-	strcpy(strPath, "/data/data/com.nexstreaming.nexplayersample/lib/");
+	strcpy(strPath, "/data/data/app.nunc.com.staatsoperlivestreaming.nexplayersample/lib/");
 	strcat(strPath, filename);
 	/*
 	* do something here.

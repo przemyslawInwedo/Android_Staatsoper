@@ -451,9 +451,9 @@ public final class NexPlayer
      * listed above instead.
      *
      * If you must work with the numeric property identifiers directly,
-     * you can retrieve them using the {@link com.nexstreaming.nexplayerengine.NexProperty#getPropertyCode() getPropertyCode}
-     * method of a member of this enum, and the methods {@link com.nexstreaming.nexplayerengine.NexPlayer#getProperties(int) getProperties(int)} and
-     * {@link com.nexstreaming.nexplayerengine.NexPlayer#setProperties(int, int) setProperties(int, int)} can be used to get or set a property based
+     * you can retrieve them using the {@link app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexProperty#getPropertyCode() getPropertyCode}
+     * method of a member of this enum, and the methods {@link app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer#getProperties(int) getProperties(int)} and
+     * {@link app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer#setProperties(int, int) setProperties(int, int)} can be used to get or set a property based
      * on the numeric identifier.
      *
      *
@@ -2248,9 +2248,9 @@ public final class NexPlayer
      * each error constant is an object, but you can convert to or from a numerical
      * code using instance and class methods.
      *
-     * To get the error constant for a given code, call {@link com.nexstreaming.nexplayerengine.NexPlayer.NexErrorCode#fromIntegerValue(int) fromIntegerValue(int)}.
+     * To get the error constant for a given code, call {@link app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer.NexErrorCode#fromIntegerValue(int) fromIntegerValue(int)}.
      *
-     * To get the error code given an error constant, call {@link com.nexstreaming.nexplayerengine.NexPlayer.NexErrorCode#getIntegerCode() getIntegerCode()}.
+     * To get the error code given an error constant, call {@link app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer.NexErrorCode#getIntegerCode() getIntegerCode()}.
      *
      * Because this is a Java \c enum, it is very easy to include the name of the
      * error constant in an error message instead of just the number.  For example, the following
@@ -5286,7 +5286,7 @@ public final class NexPlayer
      * @param nexplayer_this
      *            The CNexPlayer instance pointer.
      * @param strPackageName
-     *            The application package name. (ex. com.nexstreaming.nexplayersample)
+     *            The application package name. (ex. app.nunc.com.staatsoperlivestreaming.nexplayersample)
      * @param sdkInfo
      *            The Android SDK version.
      *              - 0x15 : SDK version 1.5 CUPCAKE

@@ -20,7 +20,7 @@
 #include <android/log.h>
 
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_NEXHTTPDOWNLOADER_REGISTER_FUNC "nexPlayerSWP_RegisterNexHTTPDownloaderInterface"
 
 #define  LOG_TAG    "NEX_HD_SAMPLE"

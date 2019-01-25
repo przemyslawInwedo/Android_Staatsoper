@@ -19,7 +19,7 @@
 #include <string.h>
 #include <android/log.h>
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_GETKEYEXT_CALLBACK_FUNC "nexPlayerSWP_RegisterGetKeyExtCallBackFunc"
 #define NEXPLAYERENGINE_GETKEYEXT_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterGetKeyExtCallBackFunc_Multi"
 

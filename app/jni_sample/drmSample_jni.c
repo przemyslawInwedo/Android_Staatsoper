@@ -20,7 +20,7 @@
 
 #define		_SUPPORT_WMDRM_
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_DESCRAMBLE_CALLBACK_FUNC "nexPlayerSWP_RegisterDRMDescrambleCallBackFunc"
 #define	NEXPLAYERENGINE_WMDRMDESCRAMBLE_CALLBACK_FUNC  "nexPlayerSWP_RegisterWMDRMDescrambleCallBackFunc"
 #define NEXPLAYERENGINE_DESCRAMBLE_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterDRMDescrambleCallBackFunc_Multi"

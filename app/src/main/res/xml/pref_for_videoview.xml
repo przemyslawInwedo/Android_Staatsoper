@@ -30,13 +30,13 @@
             android:summaryOn="@string/pref_prevent_webvtt_on"
             android:title="@string/pref_prevent_webvtt" >
         </CheckBoxPreference>
-        <com.nexstreaming.app.apis.PreferenceEditTextFormatted
+        <app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
             android:key="@string/pref_subtitle_download_path_key"
             android:title="@string/pref_subtitle_download_path"
             android:defaultValue="@string/pref_subtitle_download_path_default_value"
             attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
             attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">
-        </com.nexstreaming.app.apis.PreferenceEditTextFormatted>
+        </app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
 
         <CheckBoxPreference
             android:defaultValue="false"
@@ -46,14 +46,14 @@
             android:title="@string/pref_cea608_ignore_textmode" >
         </CheckBoxPreference>
 
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="2"
             android:entries="@array/pref_replay_mode_entries"
             android:entryValues="@array/pref_replay_mode_values"
             android:key="replayMode"
             android:summary="summary"
             android:title="@string/pref_replayMode" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
         <CheckBoxPreference
             android:defaultValue="true"
@@ -71,41 +71,41 @@
             android:title="@string/pref_hls_runmode_stable" >
         </CheckBoxPreference>
 
-        <com.nexstreaming.app.apis.PreferenceEditTextFormatted
+        <app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
             android:key="@string/pref_prefer_language_audio_key"
             android:defaultValue=""
             android:title="@string/pref_prefer_language_audio_title"
             android:summary="summary"
             attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
             attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">
-        </com.nexstreaming.app.apis.PreferenceEditTextFormatted>
+        </app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
 
-        <com.nexstreaming.app.apis.PreferenceEditTextFormatted
+        <app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
             android:key="@string/pref_prefer_language_text_key"
             android:defaultValue=""
             android:title="@string/pref_prefer_language_text_title"
             android:summary="summary"
             attr:inputformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$"
             attr:completeformat="^[[a-z][A-Z][0-9][\\-\\_\\:\\/\\.\\s]]{1,}?$">
-        </com.nexstreaming.app.apis.PreferenceEditTextFormatted>
+        </app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
 
-        <com.nexstreaming.app.apis.PreferenceEditTextFormatted
+        <app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
             android:key="@string/pref_start_nearest_bw_key"
             android:defaultValue="0"
             android:title="@string/pref_start_nearest_bw_title"
             android:summary="summary"
             attr:inputformat="^[[0-9]]{1,}?$"
             attr:completeformat="^[[0-9]]{1,}?$">
-        </com.nexstreaming.app.apis.PreferenceEditTextFormatted>
+        </app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
 
-        <com.nexstreaming.app.apis.PreferenceEditTextFormatted
+        <app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted
             android:key="@string/pref_start_sec_key"
             android:defaultValue="0"
             android:title="@string/pref_start_sec_title"
             android:summary="summary"
             attr:inputformat="^[[0-9]]{1,}?$"
             attr:completeformat="^[[0-9]]{1,}?$">
-        </com.nexstreaming.app.apis.PreferenceEditTextFormatted>
+        </app.nunc.com.staatsoperlivestreaming.apis.PreferenceEditTextFormatted>
 
         <CheckBoxPreference
             android:defaultValue="true"
@@ -115,7 +115,7 @@
             android:title="@string/pref_enableAudioOnlyTrack_title" >
         </CheckBoxPreference>
 
-        <com.nexstreaming.app.apis.SliderPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="1"
             max="10240"
             min="0"
@@ -123,9 +123,9 @@
             android:defaultValue="0"
             android:key="@string/pref_max_bandwidth_key"
             android:title="@string/pref_max_bandwidth_title" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
 
-        <com.nexstreaming.app.apis.SliderPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="1"
             max="10240"
             min="0"
@@ -133,45 +133,45 @@
             android:defaultValue="0"
             android:key="@string/pref_min_bandwidth_key"
             android:title="@string/pref_min_bandwidth_title" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
 
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="0"
             android:entries="@array/pref_QACaptionMode_entries"
             android:entryValues="@array/pref_QACaptionMode_values"
             android:key="captionMode"
             android:summary="summary"
             android:title="@string/pref_captionMode" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
 
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="0"
             android:entries="@array/pref_loglevel_values"
             android:entryValues="@array/pref_loglevel_values"
             android:key="logLevel"
             android:summary="summary"
             android:title="@string/pref_loglevel" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="Auto"
             android:entries="@array/pref_renderMode_entries"
             android:entryValues="@array/pref_renderMode_values"
             android:key="renderMode"
             android:summary="summary"
             android:title="@string/pref_renderMode" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
 
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="1"
             android:entries="@array/pref_colorSpace_entries"
             android:entryValues="@array/pref_colorSpace_values"
             android:key="colorSpace"
             android:summary="summary"
             android:title="@string/pref_colorSpace" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
         <CheckBoxPreference
             android:defaultValue="true"
@@ -190,7 +190,7 @@
             android:summaryOn="@string/pref_statistics_monitor_on"
             android:summaryOff="@string/pref_statistics_monitor_off" >
         </CheckBoxPreference>
-        <com.nexstreaming.app.apis.SliderPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="0.25"
             max="10"
             min="0"
@@ -198,9 +198,9 @@
             android:defaultValue="0"
             android:key="bufferTime"
             android:title="Buffering Time" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
 
-        <com.nexstreaming.app.apis.SliderPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="0.05"
             max="1"
             min="-1"
@@ -208,9 +208,9 @@
             android:defaultValue="0"
             android:key="AVSyncOffset"
             android:title="AV Sync Offset" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
 
-        <com.nexstreaming.app.apis.SliderPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="10"
             max="0"
             min="-100"
@@ -218,8 +218,8 @@
             android:defaultValue="-50"
             android:key="VideoDisplayWait"
             android:title="Video Display Wait Offset" >
-        </com.nexstreaming.app.apis.SliderPreference>
-        <com.nexstreaming.app.apis.SliderPreference
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="10"
             max="500"
             min="0"
@@ -227,83 +227,83 @@
             android:defaultValue="70"
             android:key="VideoDisplaySkip"
             android:title="Video Display Skip Offset" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
     </PreferenceScreen>
 
     <PreferenceScreen android:title="@string/dolby_ac3_setting">
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="0"
             android:entries="@array/pref_dolby_ac3_post_processing_entries"
             android:entryValues="@array/pref_dolby_ac3_end_point_entry_values"
             android:summary="summary"
             android:key="@string/dolby_ac3_post_processing"
             android:title="@string/dolby_ac3_post_processing" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="0"
             android:entries="@array/pref_dolby_ac3_end_point_entries"
             android:entryValues="@array/pref_dolby_ac3_end_point_entry_values"
             android:summary="summary"
             android:key="@string/dolby_ac3_end_point"
             android:title="@string/dolby_ac3_end_point" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
     </PreferenceScreen>
 
     <PreferenceScreen android:title="@string/dolby_ac4_setting">
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="0"
             android:entries="@array/pref_dolby_ac4_virtualization_entries"
             android:entryValues="@array/pref_dolby_ac4_virtualization_entry_values"
             android:summary="summary"
             android:key="@string/dolby_ac4_virtualization"
             android:title="@string/dolby_ac4_virtualization" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
-        <com.nexstreaming.app.apis.SliderPreference
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="1"
             max="12"
             min="0"
             android:defaultValue="0"
             android:key="@string/dolby_ac4_enhance_gain"
             android:title="@string/dolby_ac4_enhance_gain" >
-        </com.nexstreaming.app.apis.SliderPreference>
-        <com.nexstreaming.app.apis.SliderPreference
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="1"
             max="32"
             min="-32"
             android:defaultValue="0"
             android:key="@string/dolby_ac4_main_asso_pref"
             android:title="@string/dolby_ac4_main_asso_pref" >
-        </com.nexstreaming.app.apis.SliderPreference>
-        <com.nexstreaming.app.apis.SliderPreference
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="1"
             max="510"
             min="0"
             android:defaultValue="0"
             android:key="@string/dolby_ac4_presentation_index"
             android:title="@string/dolby_ac4_presentation_index" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
     </PreferenceScreen>
 
     <PreferenceScreen android:title="Debug Log" >
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="-1"
             android:entries="@array/pref_debug_logs_values"
             android:entryValues="@array/pref_debug_logs_values"
             android:summary="summary"
             android:key="@string/pref_debug_codec_key"
             android:title="@string/pref_debug_codec_title" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
-        <com.nexstreaming.app.apis.ListPrefWithSummary
+        <app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary
             android:defaultValue="-1"
             android:entries="@array/pref_debug_logs_values"
             android:entryValues="@array/pref_debug_logs_values"
             android:summary="summary"
             android:key="@string/pref_debug_renderer_key"
             android:title="@string/pref_debug_renderer_title" >
-        </com.nexstreaming.app.apis.ListPrefWithSummary>
+        </app.nunc.com.staatsoperlivestreaming.apis.ListPrefWithSummary>
 
-        <com.nexstreaming.app.apis.CheckBoxDialogPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.CheckBoxDialogPreference
             android:title="@string/pref_debug_protocol_title"
             android:positiveButtonText="@string/ok"
             android:negativeButtonText="@string/cancel" />
@@ -320,7 +320,7 @@
             android:title="@string/pref_trackdownEnable" >
         </CheckBoxPreference>
 
-        <com.nexstreaming.app.apis.SliderPreference
+        <app.nunc.com.staatsoperlivestreaming.apis.SliderPreference
             interval="1"
             max="100"
             min="0"
@@ -329,7 +329,7 @@
             android:key="@string/pref_trackdownThreshold_key"
             android:dependency="@string/pref_trackdownEnable_key"
             android:title="Trackdown Threshold" >
-        </com.nexstreaming.app.apis.SliderPreference>
+        </app.nunc.com.staatsoperlivestreaming.apis.SliderPreference>
     </PreferenceScreen>
 
 </PreferenceScreen>

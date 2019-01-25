@@ -341,7 +341,7 @@
     <string name="pref_download_caption_dialog_off">Do not show caption download dialog</string>
     <string name="pref_subtitle_download_path_key">SubtitleDownloadPath</string>
     <string name="pref_subtitle_download_path">Subtitle Download Path</string>
-    <string name="pref_subtitle_download_path_default_value">/data/data/com.nexstreaming.app.nexplayersample/files/</string>
+    <string name="pref_subtitle_download_path_default_value">/data/data/app.nunc.com.staatsoperlivestreaming.nexplayersample/files/</string>
     <string name="show_timed_meta_text">Show TimedMeta Text</string>
     <string name="hide_timed_meta_text">Hide TimedMeta Text</string>
     <string name="pref_enable_id3_ttml_key">EnableID3TTML</string>

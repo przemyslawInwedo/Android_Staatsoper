@@ -21,7 +21,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define	NEXPLAYERENGINE_REGISTER_REMOTE_FILE_IO_FUNC  "nexPlayerSWP_RegisterRemoteFileIOInterface"
 
 #define  LOG_TAG    "REMOTE_FILE_IO_SAMPLE"

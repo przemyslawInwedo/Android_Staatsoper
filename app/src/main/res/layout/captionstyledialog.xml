@@ -5,7 +5,7 @@
     android:layout_margin="10dip"
     android:orientation="vertical">
 
-    <com.nexstreaming.nexplayerengine.NexCaptionPreview
+    <app.nunc.com.staatsoperlivestreaming.NexCaptionPreview
         android:id="@+id/caption_preview"
         android:layout_width="match_parent"
         android:layout_height="40dip"

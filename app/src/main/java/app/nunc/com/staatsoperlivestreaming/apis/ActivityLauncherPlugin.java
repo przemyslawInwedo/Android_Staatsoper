@@ -31,8 +31,8 @@ public class ActivityLauncherPlugin implements IActivityLauncherPlugin {
 
 	protected void loadDefaultMap(HashMap<String, String> map) {
 		/* =========== PUBLIC SAMPLES ============= */
-		map.put(mContext.getString(R.string.app_list_video_ofoff_item), "com.nexstreaming.app.apis.NexVideoOnOffSample");
-		map.put(mContext.getString(R.string.app_list_video_view_item), "com.nexstreaming.app.apis.NexVideoViewSample");
+		map.put(mContext.getString(R.string.app_list_video_ofoff_item), "app.nunc.com.staatsoperlivestreaming.apis.NexVideoOnOffSample");
+		map.put(mContext.getString(R.string.app_list_video_view_item), "app.nunc.com.staatsoperlivestreaming.apis.NexVideoViewSample");
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class ActivityLauncherPlugin implements IActivityLauncherPlugin {
 	protected void loadInternalMap(HashMap<String, String> map) {
 
 		// NexMediaDrm Start
-		map.put(mContext.getString(R.string.app_list_video_view_media_drm_item), "com.nexstreaming.app.apis.NexVideoViewSampleMediaDRM");
+		map.put(mContext.getString(R.string.app_list_video_view_media_drm_item), "app.nunc.com.staatsoperlivestreaming.apis.NexVideoViewSampleMediaDRM");
 		// NexMediaDrm end
 	}
 		

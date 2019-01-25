@@ -14,7 +14,7 @@
         <com.bosphere.fadingedgelayout.FadingEdgeLayout
             android:id="@+id/fading_edge_layout"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             app:fel_edge="bottom"
             app:fel_size_bottom="160dp">
 
@@ -31,16 +31,21 @@
                     <ImageView
                         android:id="@+id/cover_photo"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
+                        android:layout_height="250dp"
                         android:src="#e6e6e6" />
 
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignBottom="@+id/cover_photo"
-                        android:scaleType="fitXY"
-                        android:src="#74000000" />
+                        android:layout_height="250dp">
+
+                        <Button
+                            android:id="@+id/play_button"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_live_stream"
+                            android:backgroundTint="@color/white"/>
+                    </RelativeLayout>
 
                 </RelativeLayout>
 
@@ -70,23 +75,22 @@
             tools:text="TITLE" />
 
         <ImageView
-            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/separator"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
+            android:background="@color/white"
             android:textColor="@color/white"
             android:textSize="26sp"
             android:textStyle="bold"
             tools:text="TITLE" />
 
         <View
+            android:id="@+id/separator"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:id="@+id/separator"
-            android:layout_alignBottom="@id/fading_edge_layout"
-            />
+            android:layout_alignBottom="@id/fading_edge_layout" />
 
         <TextView
             android:id="@+id/tv_desc"

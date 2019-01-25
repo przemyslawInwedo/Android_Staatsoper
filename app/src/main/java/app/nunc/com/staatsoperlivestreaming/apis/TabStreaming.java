@@ -1,8 +1,5 @@
 package app.nunc.com.staatsoperlivestreaming.apis;
 
-
-import android.app.AlertDialog;
-import android.app.ListFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,9 +7,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ListFragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -106,7 +104,7 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 	}
 
 	private void setGoToUrlButton() {
-		mRootView.findViewById(R.id.bottom_button).setOnClickListener(new OnClickListener() {
+		mRootView.findViewById(R.id.bottom_button).setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -117,7 +115,7 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 	}
 
 	private void showNewUrlDialog() {
-		final ScrollView linearLayout = (ScrollView) View.inflate(getContext(), R.layout.go_to_url, null);
+		final ScrollView linearLayout = (ScrollView)View.inflate(getContext(), R.layout.go_to_url, null);
 
 		// NexWVSWDrm start
 //		EditText swDrmServerKeyText = (EditText)linearLayout.findViewById(R.id.sw_drm_server_key_edit_text);
@@ -139,22 +137,22 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 				getResources().getString(R.string.play),
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
-							String url = setContentURL(linearLayout);
-							if (url != null) {
+						String url = setContentURL(linearLayout);
+						if (url != null) {
 //								if( getCheckCount(linearLayout) <= 1 ) {
-								NxbInfo info = new NxbInfo();
-								info.setUrl(url);
-								setupNxbInfo(info, linearLayout);
+							NxbInfo info = new NxbInfo();
+							info.setUrl(url);
+							setupNxbInfo(info, linearLayout);
 
-								ArrayList<NxbInfo> infoList = new ArrayList<>();
-								infoList.add(info);
-								setupAndStartActivity(infoList, info, 0, true);
+							ArrayList<NxbInfo> infoList = new ArrayList<>();
+							infoList.add(info);
+							setupAndStartActivity(infoList, info, 0, true);
 //								} else {
 //									Toast.makeText(getContext(), R.string.go_to_url_drm_error, Toast.LENGTH_LONG).show();
 //								}
-							} else {
-								Toast.makeText(getContext(), R.string.go_to_url_error, Toast.LENGTH_LONG).show();
-							}
+						} else {
+							Toast.makeText(getContext(), R.string.go_to_url_error, Toast.LENGTH_LONG).show();
+						}
 
 					}
 				}
@@ -241,7 +239,7 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 
 		if(!content.getText().toString().equals(""))
 			return url;
-		
+
 		return null;
 	}
 
@@ -407,17 +405,17 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 
 		if( infoList != null )
 			intent.putParcelableArrayListExtra("wholelist", infoList);
-		
+
 		if ( urlList != null && urlList.size() > 0 ) {
-				intent.putStringArrayListExtra("url_array", urlList);
-	 	}
+			intent.putStringArrayListExtra("url_array", urlList);
+		}
 		// Widevine start
 		if(mOptionalHeaderItem != null){
 			if(mOptionalHeaderItem.size() > 0)
 				intent.putStringArrayListExtra("WVDRMOptionalHeaders", mOptionalHeaderItem);
 		}
 		// Widevine end
-	
+
 		startActivity(intent);
 		// Widevine start
 		if(mOptionalHeaderItem != null)
@@ -468,22 +466,22 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 
 		if (isChecked) {
 			switch (buttonView.getId()) {
-			//NexMediaDrm start
+				//NexMediaDrm start
 //			case R.id.widevine_drm_check_box:
 //				//NexWVSWDrm start
 ////				mSWDRMCheckBox.setChecked(false);
 //				//NexWVSWDrm end
 //				break;
-			//NexMediaDrm end
-			//NexWVSWDrm start
+				//NexMediaDrm end
+				//NexWVSWDrm start
 //			case R.id.sw_drm_check_box:
 //				//NexMediaDrm start
 //				mWidevineDRMCheckBox.setChecked(false);
 //				//NexMediaDrm end
 //				break;
-			//NexWVSWDrm end
+				//NexWVSWDrm end
+			}
 		}
-	}
 
 		buttonView.setText(getCheckBoxString(isChecked));
 	}

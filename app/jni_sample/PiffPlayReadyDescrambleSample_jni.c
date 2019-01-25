@@ -18,7 +18,7 @@
 #include <android/log.h>
 
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_PIFFPLAYREADY_DESCRAMBLE_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterPiffPlayReadyDescrambleCallBackFunc_Multi"
 #define NEXPLAYERENGINE_PIFFPLAYREADY_DESCRAMBLE_CALLBACK_FUNC "nexPlayerSWP_RegisterPiffPlayReadyDescrambleCallBackFunc"
                                                         

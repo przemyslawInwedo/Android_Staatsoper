@@ -15,7 +15,7 @@
 
 #include <stdlib.h>
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 
 #define  LOG_TAG    "NexHLSAES128Callbacks"
 #define  DEFAULT_KEY_ATTR_LENGTH 1024

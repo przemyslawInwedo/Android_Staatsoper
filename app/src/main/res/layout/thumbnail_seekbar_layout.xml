@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:gravity="center"/>
-        <com.nexstreaming.app.widget.NexSeekBar
+        <app.nunc.com.staatsoperlivestreaming.widget.NexSeekBar
             android:id="@+id/seekbar"
             android:layout_width="0dip"
             android:layout_height="wrap_content"

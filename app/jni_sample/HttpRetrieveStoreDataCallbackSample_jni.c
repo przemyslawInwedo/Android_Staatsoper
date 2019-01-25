@@ -23,7 +23,7 @@
 #include <string.h>
 #include <android/log.h>
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_HTTPRETRIEVEDATA_CALLBACK_FUNC "nexPlayerSWP_RegisterHTTPRetrieveDataCallBackFunc"
 #define NEXPLAYERENGINE_HTTPSTOREDATA_CALLBACK_FUNC "nexPlayerSWP_RegisterHTTPStoreDataCallBackFunc"
 #define NEXPLAYERENGINE_HTTPRETRIEVEDATA_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterHTTPRetrieveDataCallBackFunc_Multi"

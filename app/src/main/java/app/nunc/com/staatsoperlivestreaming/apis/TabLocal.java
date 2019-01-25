@@ -319,7 +319,7 @@ public class TabLocal extends android.support.v4.app.ListFragment implements Med
 			
 			if ( shouldLaunch ) {
 				if ( activityClassName == null ) {
-					//activityClassName = com.nexstreaming.app.apis.NexPlayerSample.class.getName();
+					//activityClassName = app.nunc.com.staatsoperlivestreaming.apis.NexPlayerSample.class.getName();
 				}
 				startActivity(activityClassName, mFileList, file, position, urlList);
 			} // else: the plugin denied to launch the activity		 			

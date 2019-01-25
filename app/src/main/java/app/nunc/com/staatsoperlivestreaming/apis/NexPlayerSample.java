@@ -59,7 +59,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
@@ -86,12 +85,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import app.nunc.com.staatsoperlivestreaming.R;
+import app.nunc.com.staatsoperlivestreaming.apis.BandwidthDialog.IBandwidthListener;
+import app.nunc.com.staatsoperlivestreaming.apis.DolbyAC3Dialog.IDolbyAC3Listener;
+import app.nunc.com.staatsoperlivestreaming.apis.DolbyAC4Dialog.IDolbyAC4Listener;
+import app.nunc.com.staatsoperlivestreaming.apis.MultiStreamDialog.IMultiStreamListener;
+import app.nunc.com.staatsoperlivestreaming.apis.VolumeDialog.IVolumeListener;
+import app.nunc.com.staatsoperlivestreaming.apis.VolumeDialog.VOLUME_BUTTON;
 import app.nunc.com.staatsoperlivestreaming.dialog.NexContentInfoDialog;
 import app.nunc.com.staatsoperlivestreaming.info.NxbInfo;
-import app.nunc.com.staatsoperlivestreaming.apis.BandwidthDialog.IBandwidthListener;
-import app.nunc.com.staatsoperlivestreaming.apis.MultiStreamDialog.IMultiStreamListener;
-import app.nunc.com.staatsoperlivestreaming.apis.DolbyAC4Dialog.IDolbyAC4Listener;
-import app.nunc.com.staatsoperlivestreaming.apis.DolbyAC3Dialog.IDolbyAC3Listener;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.INexDRMLicenseListener;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexABRController;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexALFactory;
@@ -108,30 +109,25 @@ import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexID3TagText;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexNetAddrTable;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPictureTimingInfo;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer;
-import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer.NexProperty;;
+import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer.NexErrorCode;
+import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer.NexProperty;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexSessionData;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexStatisticsMonitor;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexStoredInfoFileUtils;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexSurfaceTextureView;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexVideoRenderer;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexVideoViewFactory;
-import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexPlayer.NexErrorCode;;
 import app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexWVDRM;
 import app.nunc.com.staatsoperlivestreaming.util.FastPlayUtil;
 import app.nunc.com.staatsoperlivestreaming.util.NetworkBroadcastReceiver;
 import app.nunc.com.staatsoperlivestreaming.util.NetworkUtils;
 import app.nunc.com.staatsoperlivestreaming.util.NexFileIO;
-import app.nunc.com.staatsoperlivestreaming.apis.VolumeDialog.IVolumeListener;;
 import app.nunc.com.staatsoperlivestreaming.util.PlayListUtils;
 import app.nunc.com.staatsoperlivestreaming.util.Util;
-import app.nunc.com.staatsoperlivestreaming.apis.VolumeDialog.VOLUME_BUTTON;;
 import app.nunc.com.staatsoperlivestreaming.widget.NexImageButton;
 
-import static app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexStatisticsMonitor.STATISTICS_GENERAL;
 import static app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexStatisticsMonitor.IStatistics;
-
-//NexWVSWDrm start
-//NexWVSWDrm end
+import static app.nunc.com.staatsoperlivestreaming.nexplayerengine.NexStatisticsMonitor.STATISTICS_GENERAL;
 
 public class NexPlayerSample extends AppCompatActivity implements NetworkBroadcastReceiver.NetworkListener{
 
@@ -174,7 +170,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 	private String mTargetSubtitlePath = null;
 
 	private NexContentInformation mContentInfo = null;
-	private ArrayList<NxbInfo> mNxbWholeList;
+	private ArrayList<NxbInfo>mNxbWholeList;
 
 	//preference
 	private float mVolume = 10.0f;
@@ -293,7 +289,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 	protected Toolbar mToolbar;
 
 	private  SendTimeHandler mTimeHandler = null;
-	private TextView mUTCTime = null;
+	private  TextView mUTCTime = null;
 	private static final int MSG_START_TIME  = 0;
 	private static final int MSG_UPDATE_TIME  = 1;
 
@@ -934,7 +930,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	}
 
-	class SendTimeHandler extends Handler {
+	class SendTimeHandler extends Handler{
 
 		@Override
 		public void handleMessage(Message msg){
@@ -976,7 +972,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	private void setGoToLiveButton() {
 		mGoToLiveButton = (NexImageButton)findViewById(R.id.go_to_live_button);
-		mGoToLiveButton.setOnClickListener(new OnClickListener() {
+		mGoToLiveButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -1082,7 +1078,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 		mThumbnailView.setVisibility(View.INVISIBLE);
 	}
 
-	OnClickListener mOnClickListener = new View.OnClickListener() {
+	View.OnClickListener mOnClickListener = new View.OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
@@ -1204,7 +1200,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	private void setupPreviousButton() {
 		mPreviousButton = (NexImageButton)findViewById(R.id.prev_button);
-		mPreviousButton.setOnClickListener(new OnClickListener() {
+		mPreviousButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -1215,7 +1211,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	private void setupRewindButton() {
 		mRewindButton = (NexImageButton)findViewById(R.id.rewind_button);
-		mRewindButton.setOnClickListener(new OnClickListener() {
+		mRewindButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -1270,7 +1266,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	private void setupNextButton() {
 		mNextButton = (NexImageButton)findViewById(R.id.next_button);
-		mNextButton.setOnClickListener(new OnClickListener() {
+		mNextButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -1308,7 +1304,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	private void setupFastForwardButton() {
 		mFastForwardButton = (NexImageButton)findViewById(R.id.fastforward_button);
-		mFastForwardButton.setOnClickListener(new OnClickListener() {
+		mFastForwardButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -1407,7 +1403,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 
 	private void setupPlayPauseButton() {
 		mPlayPauseButton = (NexImageButton)findViewById(R.id.play_pause_button);
-		mPlayPauseButton.setOnClickListener(new OnClickListener() {
+		mPlayPauseButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -1591,8 +1587,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 							mHandler.post(new Runnable() {
 								@Override
 								public void run() {
-									try {
-										String text = "Track : " + NexContentInfoExtractor.getCurrTrackID(NexPlayer.MEDIA_STREAM_TYPE_VIDEO, mContentInfo);
+									try {String text = "Track : " + NexContentInfoExtractor.getCurrTrackID(NexPlayer.MEDIA_STREAM_TYPE_VIDEO, mContentInfo);
 										mTrackView.setText(text);
 
 										setVolume();
@@ -3661,7 +3656,7 @@ public class NexPlayerSample extends AppCompatActivity implements NetworkBroadca
 	}
 
 	protected HashMap<String, String> GetOptionalHeaderFields(){
-		HashMap<String, String> optionalHeaders = new HashMap<>();
+		HashMap<String, String>  optionalHeaders = new HashMap<>();
 		Intent intent = getIntent();
 		ArrayList<String> optionalHeadersList = intent.getStringArrayListExtra("WVDRMOptionalHeaders");
 		if(optionalHeadersList == null ){

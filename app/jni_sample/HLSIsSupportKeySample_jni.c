@@ -19,7 +19,7 @@
 #include <android/log.h>
 
 
-#define NEXPLAYERENGINE_LIB "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so"
+#define NEXPLAYERENGINE_LIB "../libs/armeabi/libnexplayerengine.so"
 #define NEXPLAYERENGINE_HLS_IS_SUPPORT_KEY_CALLBACK_FUNC "nexPlayerSWP_RegisterHLSIsSupportKeyCallBackFunc"
 #define NEXPLAYERENGINE_HLS_IS_SUPPORT_KEY_CALLBACK_FUNC_MULTI "nexPlayerSWP_RegisterHLSIsSupportKeyCallBackFunc_Multi"
 
