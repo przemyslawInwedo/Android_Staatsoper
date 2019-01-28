@@ -2,7 +2,7 @@
 <resources>
     <color name="beige">#B5A15D</color>
     <color name="black">#000000</color>
-    <color name="transp_black">#AA000000</color>
+    <color name="transp_black">#00000000</color>
     <color name="bottombar_black">#1F1F1F</color>
     <color name="grey_border">#404040</color>
     <color name="grey_statusbar">#313131</color>

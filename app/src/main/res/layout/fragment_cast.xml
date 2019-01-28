@@ -52,6 +52,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_alignBottom="@+id/cover_photo"
+                            android:layout_marginBottom="0dp"
                             android:scaleType="fitXY"
                             android:src="#74000000" />
 
@@ -100,17 +101,24 @@
                 android:layout_height="20dp"
                 android:layout_alignBottom="@id/fading_edge_layout" />
 
-            <TextView
-                android:id="@+id/tv_desc"
+            <LinearLayout
+                android:id="@+id/ll_tips"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fading_edge_layout"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/beige_light"
-                android:textSize="18sp"
-                android:textStyle="italic"
-                tools:text="long desc" />
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/bottombar_black">
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:textColor="@color/beige_light"
+        android:textSize="14sp"
+        app:fontFamily="sans-serif-medium"
+        tools:text="Role" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_toRightOf="@+id/tv_value"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        tools:text="Arya" />
+
+</RelativeLayout>

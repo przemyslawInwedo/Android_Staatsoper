@@ -122,6 +122,8 @@
                 android:textColor="@color/beige_light"
                 android:textSize="18sp"
                 android:textStyle="italic"
+                android:background="@drawable/borderless_button"
+                android:layout_centerInParent="true"
                 android:text="Watch Now" />
 
             <Button
@@ -131,6 +133,8 @@
                 android:layout_below="@+id/watch_now_button"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/borderless_button"
                 android:textColor="@color/beige_light"
                 android:textSize="18sp"
                 android:textStyle="italic"
