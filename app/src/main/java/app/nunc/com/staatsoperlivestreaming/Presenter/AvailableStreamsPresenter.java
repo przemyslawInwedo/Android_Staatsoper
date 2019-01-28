@@ -1,12 +1,11 @@
 package app.nunc.com.staatsoperlivestreaming.Presenter;
 
-import java.security.Key;
+import android.util.Log;
 
 import app.nunc.com.staatsoperlivestreaming.Api.StaatsoperApi;
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
-import app.nunc.com.staatsoperlivestreaming.R;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -51,6 +50,8 @@ public class AvailableStreamsPresenter {
 
                     @Override
                     public void onError(Throwable e) {
+                        Log.d("API ERROR", e.getMessage());
+                        Log.d("API ERROR", e.getLocalizedMessage());
                         eventsView.hideProgress();
                     }
                 });

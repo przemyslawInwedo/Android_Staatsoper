@@ -1,7 +1,5 @@
 package app.nunc.com.staatsoperlivestreaming.Model;
 
-import java.util.List;
-
 public class Casting {
 
     private String name;
@@ -15,5 +13,9 @@ public class Casting {
         return role;
     }
 
-
+    @Override
+    public String toString() {
+        return "role: " + role +'\'' +
+                name + '\'';
+    }
 }

@@ -1,7 +1,5 @@
 package app.nunc.com.staatsoperlivestreaming.Api;
 
-import java.util.List;
-
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import io.reactivex.Single;
 import retrofit2.http.GET;

@@ -1,5 +1,7 @@
 package app.nunc.com.staatsoperlivestreaming.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -42,6 +44,10 @@ public class LiveFragment extends Fragment implements EventsView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
         availableStreamsPresenter = new AvailableStreamsPresenter(this);
         View view = inflater.inflate(R.layout.fragment_live, container, false);
         listView = view.findViewById(R.id.list);
@@ -53,10 +59,9 @@ public class LiveFragment extends Fragment implements EventsView {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Bundle bundle = new Bundle();
-                bundle.putInt("position", i);
+                editor.putInt("position", i);
+                editor.apply();
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
-                singleEventFragment.setArguments(bundle);
                 FragmentManager manager = getActivity().getSupportFragmentManager();
                 manager.beginTransaction()
                         .replace(getId(), singleEventFragment, singleEventFragment.getTag())

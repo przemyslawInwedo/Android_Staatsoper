@@ -16,4 +16,5 @@ public class Cast {
     public String getRole_type() {
         return role_type;
     }
+
 }

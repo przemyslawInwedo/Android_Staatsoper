@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 
 public class Results {
-    private Integer id;
+    private String id;
     @SerializedName("_self")
     private String self;
     private String title;
@@ -27,7 +27,7 @@ public class Results {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm a z")
     private Date updated;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
