@@ -6,7 +6,4 @@
     <string name="login">Login</string>
     <string name="profile">Profile</string>
     <string name="empty_list">It seems that VOD list is empty ATM</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

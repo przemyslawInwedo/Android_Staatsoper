@@ -44,7 +44,6 @@ public class LiveFragment extends Fragment implements EventsView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
@@ -53,6 +52,7 @@ public class LiveFragment extends Fragment implements EventsView {
         listView = view.findViewById(R.id.list);
         progress = view.findViewById(R.id.progress);
         root = view.findViewById(R.id.root);
+
         availableStreamsPresenter.getAvailableStreams();
         listAdapter = new ListAdapter(getActivity(), resultsList);
 

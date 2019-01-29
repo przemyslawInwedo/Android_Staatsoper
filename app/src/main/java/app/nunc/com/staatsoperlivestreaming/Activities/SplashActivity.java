@@ -7,6 +7,8 @@ import android.os.Handler;
 
 import app.nunc.com.staatsoperlivestreaming.R;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+
 public class SplashActivity extends Activity {
 
     @Override
@@ -18,10 +20,12 @@ public class SplashActivity extends Activity {
         handler.postDelayed(() -> {
 
             Intent i = new Intent(this, MainActivity.class);
+            i.addFlags(FLAG_ACTIVITY_CLEAR_TOP);
+            this.finish();
             startActivity(i);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
-        }, 2000);
+        }, 1000);
     }
 
 }

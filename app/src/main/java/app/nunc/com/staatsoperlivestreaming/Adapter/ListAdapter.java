@@ -1,8 +1,6 @@
 package app.nunc.com.staatsoperlivestreaming.Adapter;
 
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +18,6 @@ import java.util.Date;
 import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
-import app.nunc.com.staatsoperlivestreaming.Fragment.SingleEventFragment;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.R;
 import io.reactivex.annotations.NonNull;
@@ -78,7 +75,7 @@ public class ListAdapter extends ArrayAdapter<Results> {
             String formattedDate = parser.format(date);
             tvDate.setText(formattedDate);
         } catch (Exception e) {
-            Log.d("sdasd","asdasd");
+            Log.d("ERROR ADAPTER","ERROR ADAPTER");
         }
 
         return listItem;

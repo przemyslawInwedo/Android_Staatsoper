@@ -1,17 +1,18 @@
 package app.nunc.com.staatsoperlivestreaming.Activities;
 
-import android.content.Intent;
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.roughike.bottombar.BottomBar;
 
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
+import app.nunc.com.staatsoperlivestreaming.Fragment.LiveFragment;
 import app.nunc.com.staatsoperlivestreaming.Fragment.ProfileFragment;
 import app.nunc.com.staatsoperlivestreaming.Fragment.VideothequeFragment;
-import app.nunc.com.staatsoperlivestreaming.Fragment.LiveFragment;
 import app.nunc.com.staatsoperlivestreaming.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.bottomBar)
     BottomBar bottomBar;
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         attachBottomBar();
         showActiveBar();
         startScreen();
+        actionBar = getActionBar();
 
         Log.d("SYSTEM_X_DEVICE_MODEL", Keys.X_DEVICE_MODEL);
         Log.d("SYSTEM_X_DEVICE_APP", Keys.X_DEVICE_APP_NAME);
@@ -57,16 +60,19 @@ public class MainActivity extends AppCompatActivity {
 
                 getSupportFragmentManager().beginTransaction()
                         .replace(android.R.id.content, new LiveFragment()).commit();
+                getSupportActionBar().setDisplayHomeAsUpEnabled(false);
                 break;
             case R.id.videotheque:
 
                 getSupportFragmentManager().beginTransaction()
                         .replace(android.R.id.content, new VideothequeFragment()).commit();
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 break;
             case R.id.profile:
 
                 getSupportFragmentManager().beginTransaction()
                         .replace(android.R.id.content, new ProfileFragment()).commit();
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 break;
         }
     }
@@ -77,4 +83,19 @@ public class MainActivity extends AppCompatActivity {
         selectScreen(R.id.live);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // TODO Auto-generated method stub
+        getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new LiveFragment()).commit();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        bottomBar.selectTabAtPosition(0);
+        return super.onOptionsItemSelected(item);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

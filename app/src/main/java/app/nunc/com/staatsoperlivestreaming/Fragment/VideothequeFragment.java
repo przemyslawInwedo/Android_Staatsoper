@@ -1,5 +1,7 @@
 package app.nunc.com.staatsoperlivestreaming.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,25 +11,24 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
-import app.nunc.com.staatsoperlivestreaming.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
-import app.nunc.com.staatsoperlivestreaming.Presenter.AvailableStreamsPresenter;
+import app.nunc.com.staatsoperlivestreaming.Presenter.AvailableVideothequePresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
+import app.nunc.com.staatsoperlivestreaming.VideothequeView;
 
 import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
 
-public class VideothequeFragment extends Fragment implements EventsView {
+public class VideothequeFragment extends Fragment implements VideothequeView {
 
     public static List<Events> events = new ArrayList<>();
-    private AvailableStreamsPresenter availableStreamsPresenter;
+    private AvailableVideothequePresenter availableVideothequePresenter;
     private ListView listView;
     private ListAdapter listAdapter;
     private FrameLayout root;
@@ -43,22 +44,25 @@ public class VideothequeFragment extends Fragment implements EventsView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        availableStreamsPresenter = new AvailableStreamsPresenter(this);
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        availableVideothequePresenter = new AvailableVideothequePresenter(this);
         View view = inflater.inflate(R.layout.fragment_videotheque, container, false);
         listView = view.findViewById(R.id.list);
         root = view.findViewById(R.id.root);
         emptyList = view.findViewById(R.id.empty_list);
         progress = view.findViewById(R.id.progress);
-        availableStreamsPresenter.getAvailableStreams();
+
+        availableVideothequePresenter.getAvailableStreams();
         listAdapter = new ListAdapter(getActivity(), resultsList);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Bundle bundle = new Bundle();
-                bundle.putInt("position", i);
+                editor.putInt("position", i);
+                editor.apply();
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
-                singleEventFragment.setArguments(bundle);
                 FragmentManager manager = getActivity().getSupportFragmentManager();
                 manager.beginTransaction()
                         .replace(getId(), singleEventFragment, singleEventFragment.getTag())
@@ -72,7 +76,7 @@ public class VideothequeFragment extends Fragment implements EventsView {
     }
 
     @Override
-    public void setEvents(Events events) {
+    public void setVideotheque(Events events) {
         resultsList.clear();
         LiveFragment.events.clear();
         LiveFragment.events.add(events);

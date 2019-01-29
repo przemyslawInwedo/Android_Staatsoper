@@ -7,11 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import app.nunc.com.staatsoperlivestreaming.R;
 
@@ -20,29 +20,22 @@ import app.nunc.com.staatsoperlivestreaming.R;
  */
 public class SingleEventFragment extends Fragment {
 
-    private int position;
-    private ImageView coverPhoto;
-    private TabLayout tabLayout;
-
     public SingleEventFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         View view = inflater.inflate(R.layout.fragment_single_event, container, false);
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
-        tabLayout.addTab(tabLayout.newTab().setText("A"));
-        tabLayout.addTab(tabLayout.newTab().setText("B"));
-        tabLayout.addTab(tabLayout.newTab().setText("C"));
-        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        // mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        TabLayout tabLayout = view.findViewById(R.id.tabs);
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.addTab(tabLayout.newTab());
+        final ViewPager viewPager = view.findViewById(R.id.viewpager);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        //mRecyclerView.setLayoutManager(mLayoutManager);
         viewPager.setAdapter(new PagerAdapter(getFragmentManager(), tabLayout.getTabCount()));
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setupWithViewPager(viewPager);
@@ -99,32 +92,5 @@ public class SingleEventFragment extends Fragment {
         }
     }
 }
-        // Inflate the layout for this fragment
-        /*Bundle bundle = getArguments();
-        position = bundle.getInt("position");
-
-        coverPhoto = view.findViewById(R.id.cover_photo);
-        String photoUrl = LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getImg();
-
-        Picasso.get().load(photoUrl).error(R.drawable.ic_image_placeholder_big).fit().into(coverPhoto, new Callback() {
-            @Override
-            public void onSuccess() {
-            }
-
-            @Override
-            public void onError(Exception e) {
-                Log.d("PICASSO_ERROR", e.getMessage());
-            }
-        });
-
-        TextView tvDirector = view.findViewById(R.id.tv_director);
-        tvDirector.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getTitle_ext());
-
-        TextView tvTitle = view.findViewById(R.id.tv_title);
-        tvTitle.setText(LiveFragment.events.get(0).getResults().get(position).getTitle());
-
-        TextView tvDesc = view.findViewById(R.id.tv_desc);
-        tvDesc.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getLong_description());
-*/
 
 
