@@ -148,22 +148,22 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 		if( count == 0){
 
 			// create Tab0  Local Setting
-			mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_Local)).
+			/*mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_Local)).
 					setIndicator(getResources().getString(R.string.tab_host_item_Local),
-							getDrawable(this, android.R.drawable.ic_menu_save)), TabLocalContainer.class, null);
+							getDrawable(this, android.R.drawable.ic_menu_save)), TabLocalContainer.class, null);*/
 			// create Tab1  Streaming Setting
 			mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_Streaming)).
 					setIndicator(getResources().getString(R.string.tab_host_item_Streaming),
 							getDrawable(this, android.R.drawable.ic_menu_recent_history)), TabStreaming.class, null);
 
-			if( supportOfflinePlayback(sdkMode) ) {
+			/*if( supportOfflinePlayback(sdkMode) ) {
 				// create Tab2  OfflinePlayback Setting
 				mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_OfflinePlayback)).
 						setIndicator(getResources().getString(R.string.tab_host_item_OfflinePlayback),
 								getDrawable(this, android.R.drawable.ic_menu_save)), TabOfflinePlayback.class, null);
-			}
+			}*/
 
-		}else if(count != getTabChildCount(sdkMode)){
+		/*}else if(count != getTabChildCount(sdkMode)){
 			if(mTabHost.getTabWidget().getChildTabViewAt(3) != null) {
 				if (!supportOfflinePlayback(sdkMode)) {
 					mTabHost.getTabWidget().removeViewAt(3);
@@ -176,7 +176,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 							setIndicator(getResources().getString(R.string.tab_host_item_OfflinePlayback),
 									getDrawable(this, android.R.drawable.ic_menu_save)), TabOfflinePlayback.class, null);
 				}
-			}
+			}*/
 		}
 	}
 
@@ -188,7 +188,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 		}
 	}
 
-	@Override
+	/*@Override
 	public void onBackPressed() {
 		boolean isPop = false;
 
@@ -205,7 +205,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 				android.os.Process.killProcess(android.os.Process.myPid());
 			}
 		}
-	}
+	}*/
 
 	@Override
 	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

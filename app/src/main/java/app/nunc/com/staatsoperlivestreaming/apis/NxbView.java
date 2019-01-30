@@ -11,11 +11,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -58,13 +56,13 @@ public class NxbView extends Fragment {
 	private void setupUIComponents(File file) {
 		setupTitleView(file);
 		setupListView(NxbParser.getNxbInfoList(file));
-		Button backButton = (Button)mRootView.findViewById(R.id.nxb_back_button);
+		/*Button backButton = (Button)mRootView.findViewById(R.id.nxb_back_button);
 		backButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				((TabLocalContainer)getParentFragment()).popFragmentOrFolder();
 			}
-		});
+		});*/
 	}
 
 	protected File getNxbFile() {

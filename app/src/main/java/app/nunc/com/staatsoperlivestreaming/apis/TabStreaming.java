@@ -70,12 +70,13 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 		mPref = PreferenceManager.getDefaultSharedPreferences(getContext());
 		mPrefData = new NexPreferenceData(getContext());
 		mPrefData.loadPreferenceData();
-		init();
+		showNewUrlDialog();
+		/*init();*/
 	}
 
-	private void init() {
+	/*private void init() {
 		setGoToUrlButton();
-	}
+	}*/
 
 	private void updateListView() {
 		mInfoList = PlaybackHistory.getStreamingPlaybackList(getContext());
@@ -103,7 +104,7 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 		setListAdapter(adapter);
 	}
 
-	private void setGoToUrlButton() {
+	/*private void setGoToUrlButton() {
 		mRootView.findViewById(R.id.bottom_button).setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -112,7 +113,7 @@ public class TabStreaming extends ListFragment implements CompoundButton.OnCheck
 				showNewUrlDialog();
 			}
 		});
-	}
+	}*/
 
 	private void showNewUrlDialog() {
 		final ScrollView linearLayout = (ScrollView)View.inflate(getContext(), R.layout.go_to_url, null);
