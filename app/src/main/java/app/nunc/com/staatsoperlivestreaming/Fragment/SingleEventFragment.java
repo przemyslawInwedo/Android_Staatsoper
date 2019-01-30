@@ -32,10 +32,10 @@ public class SingleEventFragment extends Fragment {
                              Bundle savedInstanceState) {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         View view = inflater.inflate(R.layout.fragment_single_event, container, false);
-        TabLayout tabLayout = view.findViewById(R.id.tabs);
-        tabLayout.addTab(tabLayout.newTab());
-        tabLayout.addTab(tabLayout.newTab());
-        tabLayout.addTab(tabLayout.newTab());
+        TabLayout tabLayout = view.findViewById(R.id.tabDots);
+        tabLayout.addTab(tabLayout.newTab().setText("◌\u202C"));
+        tabLayout.addTab(tabLayout.newTab().setText("◌\u202C"));
+        tabLayout.addTab(tabLayout.newTab().setText("◌\u202C"));
         progress = view.findViewById(R.id.progress);
         final ViewPager viewPager = view.findViewById(R.id.viewpager);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());

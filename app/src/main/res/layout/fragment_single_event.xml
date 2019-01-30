@@ -8,22 +8,24 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_alignParentBottom="true"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_centerInParent="true"
         android:layout_height="wrap_content"
-        android:background="#00000000"
-        android:outlineSpotShadowColor="#00000000"
-        android:outlineAmbientShadowColor="#00000000">
+        android:background="@color/transp_black"
+        android:outlineSpotShadowColor="@color/transp_black"
+        android:outlineAmbientShadowColor="@color/transp_black">
 
         <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:tabTextAppearance="?android:attr/textAppearanceMedium"
-            app:tabTextColor="#ffffff"
-            android:layout_height="?android:actionBarSize"
-            app:tabMode="scrollable"
-            app:tabGravity="center" />
+            android:id="@+id/tabDots"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            android:outlineSpotShadowColor="@color/transp_black"
+            android:outlineAmbientShadowColor="@color/transp_black"
+            app:tabIndicatorHeight="0dp"/>
 
     </android.support.design.widget.AppBarLayout>
 
