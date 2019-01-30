@@ -19,7 +19,7 @@ import java.util.List;
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
-import app.nunc.com.staatsoperlivestreaming.Presenter.AvailableVideothequePresenter;
+import app.nunc.com.staatsoperlivestreaming.Presenter.VideothequePresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
 import app.nunc.com.staatsoperlivestreaming.VideothequeView;
 
@@ -28,7 +28,7 @@ import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
 public class VideothequeFragment extends Fragment implements VideothequeView {
 
     public static List<Events> events = new ArrayList<>();
-    private AvailableVideothequePresenter availableVideothequePresenter;
+    private VideothequePresenter videothequePresenter;
     private ListView listView;
     private ListAdapter listAdapter;
     private FrameLayout root;
@@ -47,14 +47,14 @@ public class VideothequeFragment extends Fragment implements VideothequeView {
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
-        availableVideothequePresenter = new AvailableVideothequePresenter(this);
+        videothequePresenter = new VideothequePresenter(this);
         View view = inflater.inflate(R.layout.fragment_videotheque, container, false);
         listView = view.findViewById(R.id.list);
         root = view.findViewById(R.id.root);
         emptyList = view.findViewById(R.id.empty_list);
         progress = view.findViewById(R.id.progress);
 
-        availableVideothequePresenter.getAvailableStreams();
+        videothequePresenter.getAvailableStreams();
         listAdapter = new ListAdapter(getActivity(), resultsList);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

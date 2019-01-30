@@ -15,11 +15,11 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class AvailableVideothequePresenter {
+public class VideothequePresenter {
 
     private VideothequeView videothequeView;
 
-    public AvailableVideothequePresenter(VideothequeView videothequeView) {
+    public VideothequePresenter(VideothequeView videothequeView) {
         this.videothequeView = videothequeView;
     }
 

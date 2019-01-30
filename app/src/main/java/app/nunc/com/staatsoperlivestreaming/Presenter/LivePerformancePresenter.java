@@ -15,11 +15,11 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class AvailableStreamsPresenter {
+public class LivePerformancePresenter {
 
     private EventsView eventsView;
 
-    public AvailableStreamsPresenter(EventsView eventsView) {
+    public LivePerformancePresenter(EventsView eventsView) {
         this.eventsView = eventsView;
     }
 

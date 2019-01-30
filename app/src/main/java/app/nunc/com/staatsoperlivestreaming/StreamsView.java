@@ -1,10 +1,10 @@
 package app.nunc.com.staatsoperlivestreaming;
 
-import app.nunc.com.staatsoperlivestreaming.Model.Events;
+import app.nunc.com.staatsoperlivestreaming.Model.Stream;
 
-public interface EventsView extends NetworkView {
+public interface StreamsView extends NetworkView {
 
-    void setEvents(Events events);
+    void setStream(Stream stream);
 
     void showProgress();
 

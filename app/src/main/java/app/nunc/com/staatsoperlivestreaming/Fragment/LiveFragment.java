@@ -19,7 +19,7 @@ import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
 import app.nunc.com.staatsoperlivestreaming.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
-import app.nunc.com.staatsoperlivestreaming.Presenter.AvailableStreamsPresenter;
+import app.nunc.com.staatsoperlivestreaming.Presenter.LivePerformancePresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
 
 import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
@@ -27,7 +27,7 @@ import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
 public class LiveFragment extends Fragment implements EventsView {
 
     public static List<Events> events = new ArrayList<>();
-    private AvailableStreamsPresenter availableStreamsPresenter;
+    private LivePerformancePresenter livePerformancePresenter;
     private ListView listView;
     private ListAdapter listAdapter;
     private FrameLayout root;
@@ -47,19 +47,20 @@ public class LiveFragment extends Fragment implements EventsView {
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
-        availableStreamsPresenter = new AvailableStreamsPresenter(this);
+        livePerformancePresenter = new LivePerformancePresenter(this);
         View view = inflater.inflate(R.layout.fragment_live, container, false);
         listView = view.findViewById(R.id.list);
         progress = view.findViewById(R.id.progress);
         root = view.findViewById(R.id.root);
 
-        availableStreamsPresenter.getAvailableStreams();
+        livePerformancePresenter.getAvailableStreams();
         listAdapter = new ListAdapter(getActivity(), resultsList);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 editor.putInt("position", i);
+                editor.putString("id", LiveFragment.events.get(0).getResults().get(i).getId());
                 editor.apply();
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();

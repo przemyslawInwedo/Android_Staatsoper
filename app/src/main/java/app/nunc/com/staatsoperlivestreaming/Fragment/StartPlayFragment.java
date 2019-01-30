@@ -9,19 +9,32 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-import app.nunc.com.staatsoperlivestreaming.R;
+import java.util.ArrayList;
+import java.util.List;
 
-public class StartPlayFragment extends Fragment {
+import app.nunc.com.staatsoperlivestreaming.Model.Stream;
+import app.nunc.com.staatsoperlivestreaming.Presenter.StreamsPresenter;
+import app.nunc.com.staatsoperlivestreaming.R;
+import app.nunc.com.staatsoperlivestreaming.StreamsView;
+
+public class StartPlayFragment extends Fragment implements StreamsView {
 
     private int position;
+    public static  List<Stream> stream = new ArrayList<>();
+    private String id;
     private ImageView coverPhoto;
     private TabLayout tabLayout;
+    private StreamsPresenter streamsPresenter;
+    private Button watchNowButton;
+    private View progress;
 
     public StartPlayFragment() {
         // Required empty public constructor
@@ -34,10 +47,16 @@ public class StartPlayFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_start_play, container, false);
 
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        int position = sharedPref.getInt("position", 0);
 
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        position = sharedPref.getInt("position", 0);
+        id = sharedPref.getString("id", "0");
+
+        streamsPresenter = new StreamsPresenter(this);
+        streamsPresenter.getStreams(id);
+        watchNowButton = view.findViewById(R.id.watch_now_button);
         coverPhoto = view.findViewById(R.id.cover_photo);
+        progress = view.findViewById(R.id.progress);
         String photoUrl = LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getImg();
 
         Picasso.get().load(photoUrl).error(R.drawable.ic_image_placeholder_big).fit().into(coverPhoto, new Callback() {
@@ -60,7 +79,35 @@ public class StartPlayFragment extends Fragment {
         TextView tvDesc = view.findViewById(R.id.tv_desc);
         tvDesc.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(0).getName());
 
+        watchNowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), stream.get(0).getStreams().get(0).getUrl(), Toast.LENGTH_LONG).show();
+                Log.d("STREAM URL", stream.get(0).getStreams().get(0).getUrl());
+            }
+        });
+
         return view;
     }
 
+    @Override
+    public void setStream(Stream stream) {
+        StartPlayFragment.stream.clear();
+        StartPlayFragment.stream.add(stream);
+    }
+
+    @Override
+    public void showProgress() {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void onError(Throwable e) {
+
+    }
 }

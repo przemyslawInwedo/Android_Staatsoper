@@ -20,6 +20,9 @@ import app.nunc.com.staatsoperlivestreaming.R;
  */
 public class SingleEventFragment extends Fragment {
 
+
+    private View progress;
+
     public SingleEventFragment() {
     }
 
@@ -33,6 +36,7 @@ public class SingleEventFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
+        progress = view.findViewById(R.id.progress);
         final ViewPager viewPager = view.findViewById(R.id.viewpager);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
