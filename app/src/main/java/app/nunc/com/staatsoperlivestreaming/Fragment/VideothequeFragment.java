@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
+import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.Presenter.VideothequePresenter;
@@ -37,13 +38,11 @@ public class VideothequeFragment extends Fragment implements VideothequeView {
     private RelativeLayout emptyList;
 
     public VideothequeFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
@@ -60,7 +59,7 @@ public class VideothequeFragment extends Fragment implements VideothequeView {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                editor.putInt("position", i);
+                editor.putInt(Keys.CLICKED_POSITION, i);
                 editor.apply();
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();

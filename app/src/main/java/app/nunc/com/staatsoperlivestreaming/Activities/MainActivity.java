@@ -3,13 +3,11 @@ package app.nunc.com.staatsoperlivestreaming.Activities;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.roughike.bottombar.BottomBar;
 
-import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Fragment.LiveFragment;
 import app.nunc.com.staatsoperlivestreaming.Fragment.ProfileFragment;
 import app.nunc.com.staatsoperlivestreaming.Fragment.VideothequeFragment;
@@ -32,12 +30,6 @@ public class MainActivity extends AppCompatActivity {
         showActiveBar();
         startScreen();
         actionBar = getActionBar();
-
-        Log.d("SYSTEM_X_DEVICE_MODEL", Keys.X_DEVICE_MODEL);
-        Log.d("SYSTEM_X_DEVICE_APP", Keys.X_DEVICE_APP_NAME);
-        Log.d("SYSTEM_X_DEVICE_IDENTI", Keys.X_DEVICE_IDENTIFIER);
-        Log.d("SYSTEM_X_DEVICE_SYSTEM", Keys.X_DEVICE_SYSTEM_VERSION);
-        Log.d("SYSTEM_X_DEVICE_TYPE", Keys.X_DEVICE_TYPE);
 
     }
 
@@ -85,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new LiveFragment()).commit();
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);

@@ -3,7 +3,6 @@ package app.nunc.com.staatsoperlivestreaming.Base;
 import android.os.Build;
 
 import app.nunc.com.staatsoperlivestreaming.BuildConfig;
-import app.nunc.com.staatsoperlivestreaming.R;
 
 public class Keys {
 
@@ -14,5 +13,7 @@ public class Keys {
     public static final String X_DEVICE_TYPE = Build.PRODUCT;
     public static final String X_DEVICE_MODEL = Build.MODEL;
     public static final String X_DEVICE_IDENTIFIER = BuildConfig.APPLICATION_ID;
+    public static final String CLICKED_POSITION = "clicked_position";
+    public static final String STREAM_ID = "stream_id";
 
 }

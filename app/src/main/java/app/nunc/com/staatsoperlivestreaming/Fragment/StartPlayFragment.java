@@ -3,7 +3,6 @@ package app.nunc.com.staatsoperlivestreaming.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Stream;
 import app.nunc.com.staatsoperlivestreaming.Presenter.StreamsPresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
@@ -30,27 +30,25 @@ public class StartPlayFragment extends Fragment implements StreamsView {
     private int position;
     public static  List<Stream> stream = new ArrayList<>();
     private String id;
+    private SharedPreferences sharedPref;
     private ImageView coverPhoto;
-    private TabLayout tabLayout;
     private StreamsPresenter streamsPresenter;
     private Button watchNowButton;
     private View progress;
 
     public StartPlayFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_start_play, container, false);
 
 
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        position = sharedPref.getInt("position", 0);
-        id = sharedPref.getString("id", "0");
+        sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        position = sharedPref.getInt(Keys.CLICKED_POSITION, 0);
+        id = sharedPref.getString(Keys.STREAM_ID, "0");
 
         streamsPresenter = new StreamsPresenter(this);
         streamsPresenter.getStreams(id);

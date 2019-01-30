@@ -32,8 +32,8 @@ public class VideothequePresenter {
                 .build();
         staatsoperApi = retrofit.create(StaatsoperApi.class);
 
-        Single<Events> cityKey = staatsoperApi.getVideotheque(Keys.X_DEVICE_SYSTEM_VERSION, Keys.X_DEVICE_APP_NAME, Keys.X_DEVICE_TYPE, Keys.X_DEVICE_MODEL, Keys.X_DEVICE_IDENTIFIER);
-        cityKey.subscribeOn(Schedulers.io())
+        Single<Events> eventsKey = staatsoperApi.getVideotheque(Keys.X_DEVICE_SYSTEM_VERSION, Keys.X_DEVICE_APP_NAME, Keys.X_DEVICE_TYPE, Keys.X_DEVICE_MODEL, Keys.X_DEVICE_IDENTIFIER);
+        eventsKey.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new SingleObserver<Events>() {
                     @Override

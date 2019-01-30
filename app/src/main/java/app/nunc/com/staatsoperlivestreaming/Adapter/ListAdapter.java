@@ -58,8 +58,6 @@ public class ListAdapter extends ArrayAdapter<Results> {
             }
         });
 
-        //ImageView iv_avatar = listItem.findViewById(R.id.iv_avatar);
-
         TextView tvDirector = listItem.findViewById(R.id.tv_director);
         tvDirector.setText(currentResult.getMetaDataList().getTitle_ext());
 
@@ -75,7 +73,7 @@ public class ListAdapter extends ArrayAdapter<Results> {
             String formattedDate = parser.format(date);
             tvDate.setText(formattedDate);
         } catch (Exception e) {
-            Log.d("ERROR ADAPTER","ERROR ADAPTER");
+            Log.d("ERROR ADAPTER", "ERROR ADAPTER");
         }
 
         return listItem;

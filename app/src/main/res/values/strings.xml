@@ -6,4 +6,8 @@
     <string name="login">Login</string>
     <string name="profile">Profile</string>
     <string name="empty_list">It seems that VOD list is empty ATM</string>
+    <string name="description">Description</string>
+    <string name="cast">Cast</string>
+    <string name="watch_now">Watch Now</string>
+    <string name="listen">Listen</string>
 </resources>

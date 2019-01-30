@@ -15,6 +15,10 @@ import android.widget.TextView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import app.nunc.com.staatsoperlivestreaming.Model.Cast;
 import app.nunc.com.staatsoperlivestreaming.R;
 
 public class CastFragment extends Fragment {
@@ -22,10 +26,12 @@ public class CastFragment extends Fragment {
     private int position;
     private ImageView coverPhoto;
     private LinearLayout llCast;
-    private boolean isFullCastAdded0, isFullCastAdded1, isFullCastAdded2;
+    private SharedPreferences sharedPref;
+    private String photoUrl;
+    private boolean isFullCastAdded;
+    private List<Cast> castList = new ArrayList<>();
 
     public CastFragment() {
-        // Required empty public constructor
     }
 
 
@@ -34,13 +40,15 @@ public class CastFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cast, container, false);
 
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         position = sharedPref.getInt("position", 0);
+
+        castList.addAll(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList());
 
         llCast = view.findViewById(R.id.ll_tips);
 
         coverPhoto = view.findViewById(R.id.cover_photo);
-        String photoUrl = LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getImg();
+        photoUrl = LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getImg();
 
         Picasso.get().load(photoUrl).error(R.drawable.ic_image_placeholder_big).fit().into(coverPhoto, new Callback() {
             @Override
@@ -57,36 +65,20 @@ public class CastFragment extends Fragment {
         tvDirector.setText(LiveFragment.events.get(0).getResults().get(position).getTitle());
 
         TextView tvTitle = view.findViewById(R.id.tv_title);
-        tvTitle.setText("Cast");
+        tvTitle.setText(R.string.cast);
+        isFullCastAdded = false;
 
-        for (int i = 0; i < LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(0).getCasting().size(); i++) {
+        for (int i = 0; i < castList.size(); i++) {
+            for (int j = 0; j < castList.get(i).getCasting().size(); j++) {
 
-            if (!isFullCastAdded0) {
-                addFullCast(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(0).getCasting().get(i).getName(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(0).getCasting().get(i).getRole(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(0).getRole_type());
-                isFullCastAdded0 = true;
-            } else {
-                addCast(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(0).getCasting().get(i).getName(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(0).getCasting().get(i).getRole());
-            }
-
+                if (!isFullCastAdded) {
+                    addFullCast(castList.get(i).getCasting().get(j).getName(), castList.get(i).getCasting().get(j).getRole(), castList.get(i).getRole_type());
+                    isFullCastAdded = true;
+                } else {
+                    addCast(castList.get(i).getCasting().get(j).getName(), castList.get(i).getCasting().get(j).getRole());
+                }
+            }isFullCastAdded = false;
         }
-        for (int j = 0; j < LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(1).getCasting().size(); j++) {
-            if (!isFullCastAdded1) {
-                addFullCast(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(1).getCasting().get(j).getName(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(1).getCasting().get(j).getRole(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(1).getRole_type());
-                isFullCastAdded1 = true;
-            } else {
-                addCast(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(1).getCasting().get(j).getName(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(1).getCasting().get(j).getRole());
-            }
-        }
-
-        for (int k = 0; k < LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().size(); k++) {
-            if (!isFullCastAdded2) {
-                addFullCast(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(k).getName(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(k).getRole(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getRole_type());
-                isFullCastAdded2 = true;
-            } else {
-                addCast(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(k).getName(), LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(k).getRole());
-            }
-        }
-
         return view;
     }
 

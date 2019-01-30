@@ -32,8 +32,8 @@ public class StreamsPresenter {
                 .build();
         staatsoperApi = retrofit.create(StaatsoperApi.class);
 
-        Single<Stream> cityKey = staatsoperApi.getStream(id, Keys.X_DEVICE_SYSTEM_VERSION, Keys.X_DEVICE_APP_NAME, Keys.X_DEVICE_TYPE, Keys.X_DEVICE_MODEL, Keys.X_DEVICE_IDENTIFIER);
-        cityKey.subscribeOn(Schedulers.io())
+        Single<Stream> stremsKey = staatsoperApi.getStream(id, Keys.X_DEVICE_SYSTEM_VERSION, Keys.X_DEVICE_APP_NAME, Keys.X_DEVICE_TYPE, Keys.X_DEVICE_MODEL, Keys.X_DEVICE_IDENTIFIER);
+        stremsKey.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new SingleObserver<Stream>() {
                     @Override

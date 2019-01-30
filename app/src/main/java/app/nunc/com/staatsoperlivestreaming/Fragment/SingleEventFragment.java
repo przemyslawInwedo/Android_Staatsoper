@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 
 import app.nunc.com.staatsoperlivestreaming.R;
 
-/**
-  * A simple {@link Fragment} subclass.
- */
 public class SingleEventFragment extends Fragment {
 
 
@@ -33,9 +30,9 @@ public class SingleEventFragment extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         View view = inflater.inflate(R.layout.fragment_single_event, container, false);
         TabLayout tabLayout = view.findViewById(R.id.tabDots);
-        tabLayout.addTab(tabLayout.newTab().setText("◌\u202C"));
-        tabLayout.addTab(tabLayout.newTab().setText("◌\u202C"));
-        tabLayout.addTab(tabLayout.newTab().setText("◌\u202C"));
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.addTab(tabLayout.newTab());
         progress = view.findViewById(R.id.progress);
         final ViewPager viewPager = view.findViewById(R.id.viewpager);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
@@ -43,7 +40,6 @@ public class SingleEventFragment extends Fragment {
         viewPager.setAdapter(new PagerAdapter(getFragmentManager(), tabLayout.getTabCount()));
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override

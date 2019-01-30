@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
+import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
@@ -35,15 +36,12 @@ public class LiveFragment extends Fragment implements EventsView {
     private View progress;
 
     public LiveFragment() {
-        // Required empty public constructor
-
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
@@ -59,8 +57,8 @@ public class LiveFragment extends Fragment implements EventsView {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                editor.putInt("position", i);
-                editor.putString("id", LiveFragment.events.get(0).getResults().get(i).getId());
+                editor.putInt(Keys.CLICKED_POSITION, i);
+                editor.putString(Keys.STREAM_ID, LiveFragment.events.get(0).getResults().get(i).getId());
                 editor.apply();
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();
