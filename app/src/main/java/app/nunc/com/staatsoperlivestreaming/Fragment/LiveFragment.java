@@ -17,7 +17,7 @@ import java.util.List;
 
 import app.nunc.com.staatsoperlivestreaming.Adapter.ListAdapter;
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
-import app.nunc.com.staatsoperlivestreaming.EventsView;
+import app.nunc.com.staatsoperlivestreaming.View.EventsView;
 import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.Presenter.LivePerformancePresenter;

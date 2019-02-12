@@ -18,6 +18,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Cast;
 import app.nunc.com.staatsoperlivestreaming.R;
 
@@ -41,9 +42,12 @@ public class CastFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cast, container, false);
 
         sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        position = sharedPref.getInt("position", 0);
+        position = sharedPref.getInt(Keys.CLICKED_POSITION, 0);
 
-        castList.addAll(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList());
+        if(!LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().isEmpty())
+        {
+            castList.addAll(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList());
+        }
 
         llCast = view.findViewById(R.id.ll_tips);
 

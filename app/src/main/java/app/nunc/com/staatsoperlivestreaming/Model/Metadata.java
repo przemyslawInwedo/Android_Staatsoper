@@ -7,7 +7,6 @@ import java.util.List;
 public class Metadata {
     private String img;
     private String ref_id;
-    private Integer vso_id;
     @SerializedName("cast")
     private List<Cast> castList;
     private String title_ext;
@@ -20,10 +19,6 @@ public class Metadata {
 
     public String getRef_id() {
         return ref_id;
-    }
-
-    public Integer getVso_id() {
-        return vso_id;
     }
 
     public List<Cast> getCastList() {

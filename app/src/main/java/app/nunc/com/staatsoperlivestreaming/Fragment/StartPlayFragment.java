@@ -1,6 +1,7 @@
 package app.nunc.com.staatsoperlivestreaming.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,11 +20,12 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.nunc.com.staatsoperlivestreaming.Activities.NexPlayerActivity;
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Stream;
 import app.nunc.com.staatsoperlivestreaming.Presenter.StreamsPresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
-import app.nunc.com.staatsoperlivestreaming.StreamsView;
+import app.nunc.com.staatsoperlivestreaming.View.StreamsView;
 
 public class StartPlayFragment extends Fragment implements StreamsView {
 
@@ -82,6 +84,9 @@ public class StartPlayFragment extends Fragment implements StreamsView {
             public void onClick(View view) {
                 Toast.makeText(getContext(), stream.get(0).getStreams().get(0).getUrl(), Toast.LENGTH_LONG).show();
                 Log.d("STREAM URL", stream.get(0).getStreams().get(0).getUrl());
+                Intent i = new Intent(getContext(), NexPlayerActivity.class);
+                i.putExtra("STREAM_URL", stream.get(0).getStreams().get(0).getUrl());
+                startActivity(i);
             }
         });
 

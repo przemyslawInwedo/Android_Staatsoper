@@ -5,7 +5,7 @@ import android.util.Log;
 import app.nunc.com.staatsoperlivestreaming.Api.StaatsoperApi;
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Stream;
-import app.nunc.com.staatsoperlivestreaming.StreamsView;
+import app.nunc.com.staatsoperlivestreaming.View.StreamsView;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;

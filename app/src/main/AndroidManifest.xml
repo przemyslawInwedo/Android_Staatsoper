@@ -18,14 +18,16 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:label">
-        <activity android:name=".Activities.LoginActivity"></activity>
+        <activity android:name=".Activities.NexPlayerActivity"></activity>
+        <activity android:name=".Activities.LoginActivity" />
         <activity
             android:name=".Activities.SplashActivity"
+            android:noHistory="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:noHistory="true">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"></category>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

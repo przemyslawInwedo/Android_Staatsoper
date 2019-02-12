@@ -1,4 +1,4 @@
-package app.nunc.com.staatsoperlivestreaming;
+package app.nunc.com.staatsoperlivestreaming.View;
 
 import app.nunc.com.staatsoperlivestreaming.Model.Stream;
 
