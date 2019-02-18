@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:custom="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/parent_view" >
+
+	<com.nexstreaming.nexplayerengine.NexVideoRenderer
+		android:id="@+id/videoview"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="invisible"
+		/>
+
+	<ImageView
+		android:id="@+id/imageview"
+		android:visibility="invisible"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:contentDescription="@string/imageview_contentDescription" />
+
+	<com.nexstreaming.nexplayerengine.NexCaptionPainter
+		android:id="@+id/NexCaptionPainter"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		/>
+
+	  <TextView
+		android:id="@+id/time_lyirc_textview"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="visible"
+		/>
+	<ScrollView
+		android:id="@+id/lyric_scrollview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:overScrollMode="never"
+		android:paddingTop="20dip"
+		android:paddingBottom="20dip"
+		>
+
+		<TextView
+			android:id="@+id/lyricview"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:shadowColor="#FF222222"
+			android:shadowDx="1.0"
+			android:shadowDy="1.0"
+			android:shadowRadius="1.0"
+		 />
+
+	</ScrollView>
+
+	 <TextView
+		android:id="@+id/time_meta_textview"
+		android:textColor="#ff000000"
+		android:background="#fffff000"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		/>
+
+	<ImageView
+		android:id="@+id/thumbnailView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:contentDescription="@string/imageview_contentDescription"/>
+
+	<TextView
+		android:id="@+id/error_textview"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="#44888888"
+		android:textColor="#ffffffff"
+		android:textSize="20sp"
+		android:layout_centerInParent="true"
+		android:gravity="center"
+		/>
+
+	<LinearLayout
+		android:id="@+id/visibility_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="vertical" >
+
+		<com.nexstreaming.app.apis.ThumbnailSeekBar
+			android:id="@+id/seek_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@color/color_controller_background">
+			<TextView
+				android:id="@+id/cur_video_track_text_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="4dip"/>
+			<TextView
+				android:id="@+id/cur_caption_type_text_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="4dip"/>
+		</LinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/capture_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@color/color_controller_background"
+			android:layout_weight="1" >
+			<com.nexstreaming.app.widget.NexImageButton
+				android:id="@+id/go_to_live_button"
+				android:layout_width="40dip"
+				android:layout_height="40dip"
+				android:layout_margin="3dip"
+				android:visibility="invisible"
+				android:src="@drawable/ic_appwidget_settings_sync_on"/>
+			<LinearLayout
+			   android:id="@+id/button_layout"
+			   android:layout_width="fill_parent"
+			   android:layout_height="wrap_content"
+			   android:orientation="horizontal"
+			   android:layout_centerInParent="true"
+			   android:gravity="center" >
+
+				<com.nexstreaming.app.widget.NexImageButton
+					android:id="@+id/prev_button"
+					android:layout_width="40dip"
+					android:layout_height="40dip"
+					android:layout_margin="3dip"
+					android:src="@android:drawable/ic_media_previous"/>
+				<com.nexstreaming.app.widget.NexImageButton
+					android:id="@+id/rewind_button"
+					android:layout_width="40dip"
+					android:layout_height="40dip"
+					android:layout_margin="3dip"
+					android:src="@android:drawable/ic_media_rew"/>
+				<com.nexstreaming.app.widget.NexImageButton
+					android:id="@+id/play_pause_button"
+					android:layout_width="50dip"
+					android:layout_height="50dip"
+					android:src="@android:drawable/ic_media_play" />
+				<com.nexstreaming.app.widget.NexImageButton
+					android:id="@+id/fastforward_button"
+					android:layout_width="40dip"
+					android:layout_height="40dip"
+					 android:layout_margin="3dip"
+					android:src="@android:drawable/ic_media_ff"/>
+				<com.nexstreaming.app.widget.NexImageButton
+					android:id="@+id/next_button"
+					android:layout_width="40dip"
+					android:layout_height="40dip"
+					android:layout_margin="3dip"
+					android:src="@android:drawable/ic_media_next"/>
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/statistics_info_textview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+	/>
+
+	<LinearLayout
+		android:id="@+id/brightnessview_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:orientation="vertical"
+		android:visibility="invisible"
+		android:paddingLeft="20dip"
+		android:paddingRight="20dip">
+
+		<RelativeLayout
+			android:id="@+id/contrast_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dip">
+
+			<TextView
+				android:id="@+id/contrast_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20dip"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="@string/contrast_title"
+				android:layout_marginRight="5dip" />
+
+			<TextView
+				android:id="@+id/contrast_number"
+				android:layout_centerVertical="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20dip"
+				android:text="@string/nexplayer_sample_contrast_number_default"
+				android:layout_toRightOf="@+id/contrast_title"
+				android:layout_marginRight="5dip"/>
+			<SeekBar
+				android:id="@+id/contrast_seekbar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/contrast_number"/>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/brightness_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/brightness_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="20dip"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:text="@string/brightness_title"
+			android:layout_marginRight="5dip" />
+
+		<TextView
+			android:id="@+id/brightness_number"
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="20dip"
+			android:text="@string/nexplayer_sample_brightness_number_default"
+			android:layout_toRightOf="@+id/brightness_title"
+			android:layout_marginRight="5dip"/>
+		<SeekBar
+			android:id="@+id/brightness_seekbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/brightness_number"/>
+
+	</RelativeLayout>
+		</LinearLayout>
+
+	<RelativeLayout android:id="@+id/progress_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:background="@android:color/transparent"
+		android:visibility="invisible"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true">
+		<ProgressBar android:id="@+id/player_progressbar"
+			style="?android:attr/progressBarStyleLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@android:color/transparent"
+			android:layout_centerInParent="true"/>
+		<TextView android:id="@+id/progress_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:layout_gravity="center_vertical|center_horizontal"
+			android:layout_below="@id/player_progressbar"
+			android:layout_centerHorizontal="true"/>
+	</RelativeLayout>
+
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/toolbar" />
+
+	<CheckBox
+		android:id="@+id/check_timed_meta_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:checked="true"
+		android:text="@string/show_timed_meta_text"
+		android:layout_below="@+id/tool_bar"/>
+
+	<TextView
+		android:id="@+id/text_utc_time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="90dp"
+		android:text="TextView"
+		android:layout_below="@+id/tool_bar"
+		android:visibility="visible" />
+</RelativeLayout>

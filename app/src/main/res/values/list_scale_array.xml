@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+    <string-array name="sacle_list_array">  
+            <item>@string/scale_mode_fit</item>
+            <item>@string/scale_mode_original</item>
+            <item>@string/scale_mode_full</item>
+   </string-array>
+</resources>
+
+

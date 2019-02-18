@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_module" android:title="@string/module" android:checkable="true">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_base"
+                    android:title="@string/app_list_default_item" />
+                <item
+                    android:id="@+id/nav_video_view"
+                    android:title="@string/app_list_video_view_item" />
+                <item
+                    android:id="@+id/nav_video_on_off"
+                    android:title="@string/app_list_video_ofoff_item" />
+                <item
+                    android:id="@+id/nav_fd"
+                    android:title="@string/app_list_fd_item" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

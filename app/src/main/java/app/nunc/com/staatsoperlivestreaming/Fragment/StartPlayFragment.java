@@ -14,13 +14,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nexstreaming.app.apis.BaseActivity;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import app.nunc.com.staatsoperlivestreaming.Activities.NexPlayerActivity;
 import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Stream;
 import app.nunc.com.staatsoperlivestreaming.Presenter.StreamsPresenter;
@@ -30,7 +30,7 @@ import app.nunc.com.staatsoperlivestreaming.StreamsView;
 public class StartPlayFragment extends Fragment implements StreamsView {
 
     private int position;
-    public static  List<Stream> stream = new ArrayList<>();
+    public static List<Stream> stream = new ArrayList<>();
     private String id;
     private SharedPreferences sharedPref;
     private ImageView coverPhoto;
@@ -71,21 +71,23 @@ public class StartPlayFragment extends Fragment implements StreamsView {
         });
 
         TextView tvDirector = view.findViewById(R.id.tv_director);
-        tvDirector.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getTitle_ext());
-
-        TextView tvTitle = view.findViewById(R.id.tv_title);
-        tvTitle.setText(LiveFragment.events.get(0).getResults().get(position).getTitle());
-
         TextView tvDesc = view.findViewById(R.id.tv_desc);
-        tvDesc.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(0).getName());
+        TextView tvTitle = view.findViewById(R.id.tv_title);
+        try {
+            tvDirector.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getTitle_ext());
+            tvTitle.setText(LiveFragment.events.get(0).getResults().get(position).getTitle());
+            tvDesc.setText(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().get(2).getCasting().get(0).getName());
+        } catch (Exception e) {
 
+        }
         watchNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), stream.get(0).getStreams().get(0).getUrl(), Toast.LENGTH_LONG).show();
                 Log.d("STREAM URL", stream.get(0).getStreams().get(0).getUrl());
-                Intent i = new Intent(getContext(), NexPlayerActivity.class);
+                Intent i = new Intent(getContext(), BaseActivity.class);
                 i.putExtra("STREAM_URL", stream.get(0).getStreams().get(0).getUrl());
+                Toast.makeText(getContext(), stream.get(0).getStreams().get(0).getUrl(), Toast.LENGTH_LONG).show();
                 startActivity(i);
             }
         });

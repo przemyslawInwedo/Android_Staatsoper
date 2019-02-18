@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+    <string-array name="multi_list_array">  
+            <item>@string/multi_track_audio</item>
+            <item>@string/multi_track_video</item>
+            <item>@string/multi_track_text</item>
+   </string-array>
+</resources>
+
+

@@ -24,4 +24,8 @@
     <color name="red">#FF0000</color>
     <color name="green">#4FA034</color>
     <color name="faded">#74000000</color>
+
+    <color name="color_controller_background">#44888888</color>
+    <color name="dim_foreground_dark">#bebebe</color>
+
 </resources>

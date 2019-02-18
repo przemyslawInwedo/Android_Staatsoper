@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TextView android:id="@+id/noti_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:focusable="true"
+	    android:marqueeRepeatLimit="marquee_forever"
+	    android:ellipsize="marquee" >
+	    <requestFocus/> 
+	</TextView>
+	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center"
+	    android:orientation="horizontal" >
+	   
+       	<Button 
+    	    android:id="@+id/noti_prev_button"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_margin="3dip"
+    	    android:background="@android:drawable/ic_media_previous" />
+    	
+    	<ImageButton 
+    	    android:id="@+id/noti_play_pause_button"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_margin="3dip"
+    	    android:background="@null"
+    	    android:src="@android:drawable/ic_media_pause"
+    	    android:contentDescription="@string/imageview_contentDescription" />
+   
+    	<Button 
+    	    android:id="@+id/noti_next_button"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_margin="3dip"
+    	    android:background="@android:drawable/ic_media_next" />
+	    
+	</LinearLayout>
+	    
+</LinearLayout>
