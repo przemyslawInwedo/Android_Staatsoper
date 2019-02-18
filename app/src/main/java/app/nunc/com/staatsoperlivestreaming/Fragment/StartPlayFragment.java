@@ -25,7 +25,7 @@ import app.nunc.com.staatsoperlivestreaming.Base.Keys;
 import app.nunc.com.staatsoperlivestreaming.Model.Stream;
 import app.nunc.com.staatsoperlivestreaming.Presenter.StreamsPresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
-import app.nunc.com.staatsoperlivestreaming.View.StreamsView;
+import app.nunc.com.staatsoperlivestreaming.StreamsView;
 
 public class StartPlayFragment extends Fragment implements StreamsView {
 

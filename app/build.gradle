@@ -25,7 +25,7 @@ android {
         config {
             keyAlias 'Staatsoper'
             keyPassword 'Staatsoper'
-            storeFile file('C:/projects/Android_Staatsoper/staat.jks')
+            //storeFile file('C:/projects/Android_Staatsoper/staat.jks')
             storePassword 'Staatsoper'
         }
     }
@@ -40,24 +40,33 @@ android {
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a","x86","amerabi","mips"
+        }
+    }
+    sourceSets{
+        main
+                {
+                    jniLibs.srcDirs 'libs'
+                }
     }
     buildTypes {
         debug {
             resValue "string", "APP_NAME", "Staatsoper DEV"
             debuggable true
-            signingConfig signingConfigs.config
+           // signingConfig signingConfigs.config
         }
         dev {
             resValue "string", "APP_NAME", "Staatsoper DEV"
             debuggable true
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
         }
         release {
             resValue "string", "APP_NAME", "Staatsoper Livestreaming"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             debuggable false
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
         }
     }
     flavorDimensions 'config'

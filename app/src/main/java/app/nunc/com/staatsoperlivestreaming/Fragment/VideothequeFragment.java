@@ -22,7 +22,7 @@ import app.nunc.com.staatsoperlivestreaming.Model.Events;
 import app.nunc.com.staatsoperlivestreaming.Model.Results;
 import app.nunc.com.staatsoperlivestreaming.Presenter.VideothequePresenter;
 import app.nunc.com.staatsoperlivestreaming.R;
-import app.nunc.com.staatsoperlivestreaming.View.VideothequeView;
+import app.nunc.com.staatsoperlivestreaming.VideothequeView;
 
 import static android.support.v4.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE;
 

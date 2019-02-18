@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activities.NexPlayerActivity">
 
-    <app.nexstreaming.nexplayerengine.NexVideoView
+    <com.nexstreaming.nexplayerengine.NexVideoView
         android:id="@+id/video_view"
         android:layout_width="378dp"
         android:layout_height="295dp"

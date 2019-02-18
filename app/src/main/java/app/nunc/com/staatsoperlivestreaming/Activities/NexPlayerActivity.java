@@ -13,9 +13,8 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-import app.nexstreaming.nexplayerengine.NexPlayer;
-import app.nexstreaming.nexplayerengine.NexStatisticsMonitor;
-import app.nexstreaming.nexplayerengine.NexVideoView;
+import com.nexstreaming.nexplayerengine.*;
+
 import app.nunc.com.staatsoperlivestreaming.R;
 
 public class NexPlayerActivity extends AppCompatActivity {
