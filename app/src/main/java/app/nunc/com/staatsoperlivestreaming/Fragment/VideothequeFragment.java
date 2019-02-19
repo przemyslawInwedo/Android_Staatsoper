@@ -60,6 +60,7 @@ public class VideothequeFragment extends Fragment implements VideothequeView {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 editor.putInt(Keys.CLICKED_POSITION, i);
+                editor.putString(Keys.STREAM_ID, LiveFragment.events.get(0).getResults().get(i).getId());
                 editor.apply();
                 SingleEventFragment singleEventFragment = new SingleEventFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();

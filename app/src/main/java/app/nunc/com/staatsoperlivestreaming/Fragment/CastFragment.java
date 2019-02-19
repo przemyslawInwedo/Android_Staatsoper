@@ -44,9 +44,14 @@ public class CastFragment extends Fragment {
         sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         position = sharedPref.getInt(Keys.CLICKED_POSITION, 0);
 
-        if(!LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().isEmpty())
+        try {
+            if(!LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList().isEmpty())
+            {
+                castList.addAll(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList());
+            }
+        } catch (Exception e)
         {
-            castList.addAll(LiveFragment.events.get(0).getResults().get(position).getMetaDataList().getCastList());
+
         }
 
         llCast = view.findViewById(R.id.ll_tips);

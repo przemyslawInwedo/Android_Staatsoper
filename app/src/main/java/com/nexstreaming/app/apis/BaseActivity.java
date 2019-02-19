@@ -36,9 +36,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent i = getIntent();
-        String videoURL = i.getStringExtra("STREAM_URL");
-
         if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
             finish();
             return;
@@ -46,7 +43,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         mPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         setContentView();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        Toolbar toolbar = findViewById(R.id.tool_bar);
         //setSupportActionBar(toolbar);
 
         if (NexSystemInfo.getPlatformInfo() >= NexSystemInfo.NEX_SUPPORT_PLATFORM_MARSHMALLOW) {
@@ -58,8 +55,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             mPermissionManager.requestPermissions();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
 
         if (navigationView != null) {
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -89,27 +86,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         editor.apply();
     }
 
-    private MenuItem getCheckedMenuItem() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        Menu menu = navigationView.getMenu();
-        MenuItem ret = null;
-        if (menu.size() > 0) {
-            MenuItem item = menu.findItem(R.id.nav_module);
-            menu = item.getSubMenu();
-            if (menu.size() > 0) {
-                int i = 0;
-                while (i < menu.size()) {
-                    if (menu.getItem(i).isChecked()) {
-                        ret = menu.getItem(i);
-                        break;
-                    }
-                    i++;
-                }
-            }
-        }
-        return ret;
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -123,10 +99,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-    protected SharedPreferences getSharedPreferences() {
-        return mPref;
-    }
-
     protected IActivityLauncherPlugin getActivityLauncherPlugin() {
         return ActivityLauncherPlugin.getPlugin(this);
     }
@@ -138,9 +110,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         return num;
     }
 
-    /**
-     * set the base Listview
-     */
     protected void setupTabHost() {
         mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
@@ -150,21 +119,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         if (count == 0) {
 
-            // create Tab0  Local Setting
-			/*mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_Local)).
-					setIndicator(getResources().getString(R.string.tab_host_item_Local),
-							getDrawable(this, android.R.drawable.ic_menu_save)), TabLocalContainer.class, null);*/
-            // create Tab1  Streaming Setting
             mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_Streaming)).
                     setIndicator(getResources().getString(R.string.tab_host_item_Streaming),
                             getDrawable(this, android.R.drawable.ic_menu_recent_history)), TabStreaming.class, null);
-
-			/*if( supportOfflinePlayback(sdkMode) ) {
-				// create Tab2  OfflinePlayback Setting
-				mTabHost.addTab(mTabHost.newTabSpec(getResources().getString(R.string.tab_host_item_OfflinePlayback)).
-						setIndicator(getResources().getString(R.string.tab_host_item_OfflinePlayback),
-								getDrawable(this, android.R.drawable.ic_menu_save)), TabOfflinePlayback.class, null);
-			}*/
 
         } else if (count != getTabChildCount(sdkMode)) {
             if (mTabHost.getTabWidget().getChildTabViewAt(3) != null) {
@@ -215,7 +172,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             mPermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-
     private boolean supportOfflinePlayback(String sdkMode) {
         return supportOfflinePlayback(this, sdkMode);
     }
@@ -229,30 +185,12 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         return ret;
     }
 
-    private Class findClass(String className) {
-        Class incClass = null;
-        try {
-            incClass = Class.forName(className);
-        } catch (ClassNotFoundException e) {
-            Log.e(LOG_TAG, "Can't find " + className + ".");
-            Toast toast = Toast.makeText(getApplicationContext(), "Can't find " + className + " You can't use this demo app.", Toast.LENGTH_LONG);
-            toast.show();
-        }
-        return incClass;
-    }
-
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
         String sdkMode = item.getTitle().toString();
-
         Log.d(LOG_TAG, "onNavigationItemSelected title : " + sdkMode);
         setSdkMode(sdkMode);
-
-
         Class incClass = null;
-        String className = "";
-
 
         if (getString(R.string.app_list_fd_item).equals(sdkMode)) {
             incClass = NexFDSample.class;
@@ -271,5 +209,4 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }

@@ -23,7 +23,7 @@ public class LivePerformancePresenter {
         this.eventsView = eventsView;
     }
 
-    public void getAvailableStreams(){
+    public void getAvailableStreams() {
         StaatsoperApi staatsoperApi;
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Keys.SERVICE_ENDPOINT)
@@ -45,7 +45,6 @@ public class LivePerformancePresenter {
                     public void onSuccess(Events eventsModel) {
                         eventsView.setEvents(eventsModel);
                         eventsView.hideProgress();
-
                     }
 
                     @Override

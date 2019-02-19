@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.VideothequeFragment"
-    android:background="@color/bottombar_black"
-    android:layout_marginBottom="60dp">
+    android:layout_marginBottom="60dp"
+    android:background="@color/white"
+    tools:context=".Fragment.VideothequeFragment">
 
     <include
         android:id="@+id/progress"
@@ -14,16 +14,15 @@
 
     <RelativeLayout
         android:id="@+id/empty_list"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="60dp"
+        android:visibility="gone">
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/bottombar_black">
-
         </View>
 
         <TextView
@@ -39,8 +38,7 @@
     <ListView
         android:id="@+id/list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp">
+        android:layout_height="wrap_content">
 
     </ListView>
 
